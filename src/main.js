@@ -100,9 +100,7 @@ function renderScale(chain, selected) {
     el(
       'section',
       { class: 'intro' },
-      el('h1', {}, node.label),
       el('p', {}, node.summary),
-      node.science ? el('p', { class: 'science' }, el('strong', {}, 'Why: '), node.science) : null,
     ),
     el(
       'section',
@@ -146,7 +144,6 @@ function renderScale(chain, selected) {
           { class: 'detail' },
           el('h2', {}, current.word),
           el('p', {}, current.meaning),
-          current.science ? el('p', { class: 'science' }, el('strong', {}, 'Food science: '), current.science) : null,
         )
       : el('p', { class: 'hint' }, 'Tap a word on the scale to highlight it.'),
     el(
@@ -162,7 +159,6 @@ function renderScale(chain, selected) {
             {},
             el('strong', {}, w.word),
             el('span', { class: 'glossary-meaning' }, ` ${w.meaning}`),
-            w.science ? el('span', { class: 'glossary-science' }, w.science) : null,
           ),
         ),
       ),
