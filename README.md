@@ -10,11 +10,10 @@ A small, static, mobile-friendly website. Start from a top-level category
 (Taste, Aroma, Texture, Mouthfeel, Heat & Sensation, Overall Impression, Finish),
 tap your way down (for example Aroma → Fruity → Citrus), and at the bottom you
 get a left-to-right scale of descriptor words, from mildest to most intense.
-Tap a word for its one-line meaning and, where known, the food-science reason
-behind it (the compound or mechanism).
+Tap a word for its one-line meaning and a few similar words.
 
 There is no backend, login or database. The URL hash holds where you are
-(`#/taste/sour?w=Tart`), so the browser back button and shared links work.
+(`#/taste/sour/sourness?w=Tart`), so the browser back button and shared links work.
 
 ## Run locally
 
@@ -30,7 +29,9 @@ npm run preview  # serve the production build
 All content lives in one versioned file: [`src/data/descriptors.json`](src/data/descriptors.json).
 `npm run build` runs `scripts/check-data.mjs` first, which fails the build if
 the file is malformed (duplicate ids, a node with both or neither of
-`children`/`scale`, unknown sources).
+`children`/`scale`, unknown sources, more than 9 children on one node) or
+repeats itself (a descriptor word on more than one scale, or a synonym that is
+a word on the same scale or anywhere else).
 
 Every category and every word has a `source` field:
 
@@ -42,8 +43,6 @@ Every category and every word has a `source` field:
 - **`sensory`**: gap-fill entries from standard sensory-science and
   flavor-wheel vocabulary, for areas PE doesn't cover yet (for example
   carbonation, finish, Sichuan-pepper numbing).
-
-The site shows a **PE** or **std** badge next to each entry.
 
 To add or change words, edit `descriptors.json`, bump `version` if the shape
 changes, and run `npm run build`.
