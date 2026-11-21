@@ -1,5 +1,6 @@
 import data from './data/descriptors.json'
 import './style.css'
+import { renderWheel } from './wheel.js'
 
 const app = document.getElementById('app')
 
@@ -78,31 +79,14 @@ function breadcrumb(chain) {
 
 function renderBranch(chain) {
   const node = chain.at(-1)
-  const isRoot = chain.length === 1
+  if (chain.length === 1) return []
   return [
-    isRoot
-      ? null
-      : el(
-          'section',
-          { class: 'intro' },
-          el('h1', {}, node.label),
-          el('p', {}, node.summary),
-          node.science ? el('p', { class: 'science' }, el('strong', {}, 'Why: '), node.science) : null,
-        ),
     el(
-      'ul',
-      { class: 'cards' },
-      node.children.map((c) =>
-        el(
-          'li',
-          {},
-          el(
-            'a',
-            { class: 'card', href: hrefFor([...chain, c]) },
-            el('span', { class: 'card-title' }, c.label, badge(c.source)),
-          ),
-        ),
-      ),
+      'section',
+      { class: 'intro' },
+      el('h1', {}, node.label),
+      el('p', {}, node.summary),
+      node.science ? el('p', { class: 'science' }, el('strong', {}, 'Why: '), node.science) : null,
     ),
   ]
 }
@@ -200,7 +184,11 @@ function render() {
   const node = chain.at(-1)
   document.title = chain.length > 1 ? `${node.label} · Food Describer` : 'Food Describer'
   app.replaceChildren(
-    ...[chain.length > 1 ? breadcrumb(chain) : null, ...(node.scale ? renderScale(chain, word) : renderBranch(chain))].filter(Boolean),
+    ...[
+      chain.length > 1 ? breadcrumb(chain) : null,
+      renderWheel(chain, hrefFor),
+      ...(node.scale ? renderScale(chain, word) : renderBranch(chain)),
+    ].filter(Boolean),
   )
   // On narrow screens the scale scrolls sideways; keep the chosen word in view.
   const active = app.querySelector('.word.is-active')
@@ -210,12 +198,14 @@ function render() {
   }
 }
 
-let lastPath = null
+let lastPath = location.hash.split('?')[0]
 window.addEventListener('hashchange', () => {
   const path = location.hash.split('?')[0]
   render()
-  if (path !== lastPath) window.scrollTo({ top: 0 })
+  // Reaching a leaf: bring its word scale (below the wheel) into view.
+  if (path !== lastPath && app.querySelector('.scale')) {
+    app.querySelector('.intro').scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
   lastPath = path
 })
-lastPath = location.hash.split('?')[0]
 render()
