@@ -143,6 +143,9 @@ function renderScale(chain, selected) {
           'section',
           { class: 'detail' },
           el('p', {}, current.meaning),
+          current.synonyms?.length
+            ? el('p', { class: 'synonyms' }, el('span', {}, 'Similar: '), current.synonyms.join(', '))
+            : null,
         )
       : el('p', { class: 'hint' }, 'Tap a word on the scale to highlight it.'),
   ]
