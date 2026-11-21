@@ -149,11 +149,11 @@ export function renderWheel(chain, hrefFor) {
   const center = svg(
     'a',
     {
-      href: hrefFor(chain.length > 1 ? chain.slice(0, -1) : chain),
+      href: hrefFor(chain.slice(0, 1)),
       class: 'wheel-center',
-      'aria-label': chain.length > 1 ? 'Go back up one level' : root.label,
+      'aria-label': chain.length > 1 ? 'Reset to all categories' : root.label,
     },
-    svg('title', {}, chain.length > 1 ? 'Back' : 'Food Describer'),
+    svg('title', {}, chain.length > 1 ? 'Reset' : 'Food Describer'),
     svg('circle', { r: CENTER_R - 2 }),
     svg('image', { href: `${import.meta.env.BASE_URL}tongue.svg`, x: -60, y: -60, width: 120, height: 120 }),
   )

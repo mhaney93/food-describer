@@ -47,29 +47,6 @@ function el(tag, attrs = {}, ...children) {
   return node
 }
 
-function breadcrumb(chain) {
-  return el(
-    'nav',
-    { class: 'crumbs', 'aria-label': 'Breadcrumb' },
-    chain.length > 1
-      ? el('a', { class: 'back', href: hrefFor(chain.slice(0, -1)), 'aria-label': 'Back' }, '← Back')
-      : null,
-    el(
-      'ol',
-      {},
-      chain.map((n, i) =>
-        el(
-          'li',
-          {},
-          i === chain.length - 1
-            ? el('span', { 'aria-current': 'page' }, n.label)
-            : el('a', { href: hrefFor(chain.slice(0, i + 1)) }, n.label),
-        ),
-      ),
-    ),
-  )
-}
-
 function renderBranch(chain) {
   const node = chain.at(-1)
   if (chain.length === 1) return []
@@ -158,7 +135,6 @@ function render() {
   document.title = chain.length > 1 ? `${node.label} · Food Describer` : 'Food Describer'
   app.replaceChildren(
     ...[
-      chain.length > 1 ? breadcrumb(chain) : null,
       renderWheel(chain, hrefFor),
       ...(node.scale ? renderScale(chain, word) : renderBranch(chain)),
     ].filter(Boolean),
@@ -171,7 +147,17 @@ function render() {
   }
 }
 
+// Tapping the tongue resets the wheel: clear the hash entirely and re-render.
+app.addEventListener('click', (e) => {
+  if (!e.target.closest('.wheel-center')) return
+  e.preventDefault()
+  if (location.hash) history.pushState(null, '', location.pathname + location.search)
+  lastPath = ''
+  render()
+})
+
 let lastPath = location.hash.split('?')[0]
+window.addEventListener('popstate', () => render())
 window.addEventListener('hashchange', () => {
   const path = location.hash.split('?')[0]
   render()
