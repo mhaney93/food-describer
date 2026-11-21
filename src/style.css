@@ -109,20 +109,7 @@ a { color: var(--accent); }
   margin: 12px 0 0; padding: 14px 18px; border-radius: var(--radius);
   border-left: 4px solid var(--accent); background: var(--surface);
 }
-.detail h2 { margin: 0 0 4px; font-size: 1.3rem; }
 .detail p { margin: 0 0 6px; }
-
-.glossary { list-style: none; margin: 24px 0 0; padding: 0; display: grid; gap: 2px; }
-.glossary li {
-  display: grid; grid-template-columns: 28px 1fr; gap: 10px; align-items: start;
-  padding: 10px 8px; border-radius: 10px;
-}
-.glossary li.is-active { background: color-mix(in srgb, var(--accent) 10%, transparent); }
-.glossary-rank {
-  display: inline-grid; place-items: center; width: 24px; height: 24px; border-radius: 50%;
-  font-size: 0.75rem; font-weight: 700; color: var(--muted); border: 1px solid var(--line);
-}
-.glossary-meaning { color: var(--ink); }
 
 @media (max-width: 560px) {
   #app { padding-left: 14px; padding-right: 14px; }

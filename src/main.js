@@ -142,27 +142,9 @@ function renderScale(chain, selected) {
       ? el(
           'section',
           { class: 'detail' },
-          el('h2', {}, current.word),
           el('p', {}, current.meaning),
         )
       : el('p', { class: 'hint' }, 'Tap a word on the scale to highlight it.'),
-    el(
-      'ol',
-      { class: 'glossary' },
-      words.map((w, i) =>
-        el(
-          'li',
-          { class: current === w ? 'is-active' : null },
-          el('span', { class: 'glossary-rank', 'aria-hidden': 'true' }, String(i + 1)),
-          el(
-            'div',
-            {},
-            el('strong', {}, w.word),
-            el('span', { class: 'glossary-meaning' }, ` ${w.meaning}`),
-          ),
-        ),
-      ),
-    ),
   ]
 }
 
