@@ -34,10 +34,7 @@
 body { margin: 0; min-height: 100vh; display: flex; flex-direction: column; }
 a { color: var(--accent); }
 
-.site-header, #app, .site-footer { width: 100%; max-width: 960px; margin: 0 auto; padding: 0 20px; }
-.site-header { padding-top: 24px; }
-.brand { font-weight: 800; font-size: 1.35rem; text-decoration: none; color: var(--ink); letter-spacing: -0.01em; }
-.tagline { margin: 2px 0 0; color: var(--muted); font-size: 0.95rem; }
+#app, .site-footer { width: 100%; max-width: 960px; margin: 0 auto; padding: 0 20px; }
 #app { flex: 1; padding-bottom: 40px; }
 .site-footer { color: var(--muted); font-size: 0.85rem; padding-bottom: 28px; border-top: 1px solid var(--line); padding-top: 16px; }
 
@@ -60,7 +57,6 @@ a { color: var(--accent); }
   display: inline-block; margin-left: 8px; padding: 0 6px; border-radius: 6px;
   font-size: 0.68rem; font-weight: 700; letter-spacing: 0.04em; vertical-align: middle; line-height: 1.6;
 }
-.badge-pe { background: color-mix(in srgb, var(--pe) 16%, transparent); color: var(--pe); }
 .badge-sensory { background: color-mix(in srgb, var(--muted) 16%, transparent); color: var(--muted); }
 .site-footer .badge { margin: 0 2px; }
 
@@ -81,8 +77,6 @@ a { color: var(--accent); }
   outline: none;
 }
 .card-title { font-weight: 700; font-size: 1.1rem; }
-.card-summary { color: var(--muted); font-size: 0.9rem; flex: 1; }
-.card-meta { color: var(--accent); font-size: 0.82rem; font-weight: 600; }
 
 /* Mild → intense scale */
 .scale {
@@ -145,7 +139,7 @@ a { color: var(--accent); }
 .glossary-science { display: block; color: var(--muted); font-size: 0.85rem; margin-top: 2px; }
 
 @media (max-width: 560px) {
-  .site-header, #app, .site-footer { padding-left: 14px; padding-right: 14px; }
+  #app, .site-footer { padding-left: 14px; padding-right: 14px; }
   .scale { --min-col: 72px; }
   .word-label { font-size: 0.8rem; }
 }

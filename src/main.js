@@ -48,14 +48,10 @@ function el(tag, attrs = {}, ...children) {
 
 function badge(source) {
   return source === 'pe'
-    ? el('span', { class: 'badge badge-pe', title: 'From Project Everything' }, 'PE')
+    ? null
     : el('span', { class: 'badge badge-sensory', title: 'Standard sensory-science vocabulary' }, 'std')
 }
 
-function countLeaves(node) {
-  if (node.scale) return node.scale.length
-  return (node.children || []).reduce((n, c) => n + countLeaves(c), 0)
-}
 
 function breadcrumb(chain) {
   return el(
@@ -84,19 +80,15 @@ function renderBranch(chain) {
   const node = chain.at(-1)
   const isRoot = chain.length === 1
   return [
-    el(
-      'section',
-      { class: 'intro' },
-      el('h1', {}, isRoot ? 'What are you noticing?' : node.label),
-      el(
-        'p',
-        {},
-        isRoot
-          ? 'Pick a category, then keep narrowing down until you reach a scale of words from mildest to most intense.'
-          : node.summary,
-      ),
-      !isRoot && node.science ? el('p', { class: 'science' }, el('strong', {}, 'Why: '), node.science) : null,
-    ),
+    isRoot
+      ? null
+      : el(
+          'section',
+          { class: 'intro' },
+          el('h1', {}, node.label),
+          el('p', {}, node.summary),
+          node.science ? el('p', { class: 'science' }, el('strong', {}, 'Why: '), node.science) : null,
+        ),
     el(
       'ul',
       { class: 'cards' },
@@ -108,12 +100,6 @@ function renderBranch(chain) {
             'a',
             { class: 'card', href: hrefFor([...chain, c]) },
             el('span', { class: 'card-title' }, c.label, badge(c.source)),
-            el('span', { class: 'card-summary' }, c.summary),
-            el(
-              'span',
-              { class: 'card-meta' },
-              c.scale ? `${c.scale.length} words →` : `${c.children.length} groups · ${countLeaves(c)} words →`,
-            ),
           ),
         ),
       ),
@@ -213,7 +199,9 @@ function render() {
   const chain = resolve(ids)
   const node = chain.at(-1)
   document.title = chain.length > 1 ? `${node.label} · Food Describer` : 'Food Describer'
-  app.replaceChildren(breadcrumb(chain), ...(node.scale ? renderScale(chain, word) : renderBranch(chain)))
+  app.replaceChildren(
+    ...[chain.length > 1 ? breadcrumb(chain) : null, ...(node.scale ? renderScale(chain, word) : renderBranch(chain))].filter(Boolean),
+  )
   // On narrow screens the scale scrolls sideways; keep the chosen word in view.
   const active = app.querySelector('.word.is-active')
   const scale = app.querySelector('.scale')
