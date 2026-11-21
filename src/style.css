@@ -63,7 +63,7 @@ a { color: var(--accent); }
 .wheel-label { fill: #2b211c; font-weight: 700; pointer-events: none; user-select: none; }
 .wheel-center circle { fill: var(--surface); stroke: var(--line); stroke-width: 3; }
 .wheel-center:hover circle, .wheel-center:focus-visible circle { stroke: var(--accent); }
-.wheel-center text { pointer-events: none; }
+.wheel-center image { pointer-events: none; }
 
 /* Mild → intense scale */
 .scale {
