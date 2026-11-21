@@ -33,6 +33,11 @@ function check(node, path) {
       const key = w.word?.toLowerCase()
       if (wordAt.has(key)) errors.push(`${where}: word "${w.word}" also on ${wordAt.get(key)}`)
       else wordAt.set(key, where)
+      // Two or three everyday foods that show this word at this step of the scale.
+      const ex = w.examples
+      if (!Array.isArray(ex) || ex.length < 2 || ex.length > 3) errors.push(`${where}: "${w.word}" needs 2-3 examples`)
+      else if (ex.some((e) => typeof e !== 'string' || !e.trim())) errors.push(`${where}: "${w.word}" has an empty example`)
+      else if (new Set(ex.map((e) => e.toLowerCase())).size !== ex.length) errors.push(`${where}: "${w.word}" repeats an example`)
       const seen = new Set()
       for (const s of w.synonyms || []) {
         const k = s.toLowerCase()

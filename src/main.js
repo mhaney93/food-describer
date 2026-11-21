@@ -120,6 +120,9 @@ function renderScale(chain, selected) {
           'section',
           { class: 'detail' },
           el('p', {}, current.meaning),
+          current.examples?.length
+            ? el('p', { class: 'examples' }, el('span', {}, 'Examples: '), current.examples.join(', '))
+            : null,
           current.synonyms?.length
             ? el('p', { class: 'synonyms' }, el('span', {}, 'Similar: '), current.synonyms.join(', '))
             : null,
@@ -147,7 +150,7 @@ function render() {
   }
 }
 
-// Search: index every category label, descriptor word and synonym at load.
+// Search: index every category label, descriptor word, synonym and example food at load.
 function buildIndex() {
   const out = []
   const walk = (chain) => {
@@ -157,6 +160,7 @@ function buildIndex() {
     for (const w of n.scale || []) {
       out.push({ text: w.word, hint: n.label, chain, word: w.word })
       for (const s of w.synonyms || []) out.push({ text: s, to: w.word, hint: n.label, chain, word: w.word })
+      for (const x of w.examples || []) out.push({ text: x, to: w.word, hint: n.label, chain, word: w.word })
     }
   }
   walk([root])
