@@ -42,6 +42,27 @@ a { color: var(--accent); }
 .science { font-size: 0.92rem; }
 .science strong { color: var(--pe); }
 
+/* Search */
+.search { position: relative; z-index: 10; width: 100%; max-width: 960px; margin: 12px auto 0; padding: 0 20px; box-sizing: border-box; }
+.search-input {
+  width: 100%; max-width: 320px; box-sizing: border-box; font: inherit; font-size: 1rem;
+  padding: 8px 14px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--ink);
+}
+.search-input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+.search-list {
+  position: absolute; top: calc(100% + 4px); left: 20px; width: min(360px, calc(100% - 40px));
+  margin: 0; padding: 4px; list-style: none; background: var(--surface); border: 1px solid var(--line);
+  border-radius: 12px; box-shadow: 0 8px 24px rgb(0 0 0 / 0.12);
+}
+.search-opt { display: flex; justify-content: space-between; gap: 12px; padding: 8px 10px; border-radius: 8px; cursor: pointer; }
+.search-opt.is-active, .search-opt:hover { background: color-mix(in srgb, var(--accent) 14%, transparent); }
+.search-hint { color: var(--muted); font-size: 0.85rem; text-align: right; }
+@media (min-width: 900px) {
+  .search { position: absolute; top: 16px; left: 16px; margin: 0; padding: 0; width: 320px; }
+  .search-list { left: 0; width: 100%; }
+}
+@media (max-width: 560px) { .search { padding: 0 14px; } .search-list { left: 14px; width: calc(100% - 28px); } }
+
 /* Taste wheel */
 .wheel { display: block; width: 100%; max-width: 640px; height: auto; margin: 32px auto 8px; touch-action: manipulation; }
 @media (min-width: 900px) {
