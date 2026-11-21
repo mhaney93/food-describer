@@ -43,7 +43,13 @@ a { color: var(--accent); }
 .science strong { color: var(--pe); }
 
 /* Taste wheel */
-.wheel { display: block; width: 100%; max-width: 640px; height: auto; margin: 12px auto 8px; touch-action: manipulation; }
+.wheel { display: block; width: 100%; max-width: 640px; height: auto; margin: 32px auto 8px; touch-action: manipulation; }
+@media (min-width: 900px) {
+  .wheel { max-width: min(640px, calc(100vh - 96px)); margin-top: 48px; }
+  /* Nothing below the wheel: centre it in the viewport. */
+  #app:has(> .wheel:only-child) { display: flex; flex-direction: column; justify-content: center; padding-bottom: 0; }
+  #app:has(> .wheel:only-child) .wheel { margin: 0 auto; }
+}
 .wheel a { cursor: pointer; outline: none; }
 .wheel-seg path { stroke: var(--bg); stroke-width: 2; transition: opacity 0.15s ease, filter 0.15s ease; }
 .wheel-seg:hover path, .wheel-seg:focus-visible path { filter: brightness(1.08) saturate(1.15); }
