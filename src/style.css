@@ -37,23 +37,40 @@ a { color: var(--accent); }
 #app { width: 100%; max-width: 960px; margin: 0 auto; padding: 0 20px; }
 #app { flex: 1; padding-bottom: 40px; }
 
-.crumbs { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin: 20px 0 8px; font-size: 0.9rem; }
-.crumbs ol { display: flex; flex-wrap: wrap; list-style: none; margin: 0; padding: 0; gap: 4px; }
-.crumbs li + li::before { content: '›'; margin-right: 4px; color: var(--muted); }
-.crumbs a { text-decoration: none; }
-.crumbs [aria-current] { color: var(--muted); }
-.back {
-  border: 1px solid var(--line); border-radius: 999px; padding: 4px 12px;
-  background: var(--surface); color: var(--ink); font-weight: 600;
-}
-
 .intro h1 { margin: 8px 0 4px; font-size: clamp(1.6rem, 4vw, 2.2rem); letter-spacing: -0.02em; }
 .intro p { margin: 0 0 8px; color: var(--muted); max-width: 65ch; }
 .science { font-size: 0.92rem; }
 .science strong { color: var(--pe); }
 
+/* Search */
+.search { position: relative; z-index: 10; width: 100%; max-width: 960px; margin: 12px auto 0; padding: 0 20px; box-sizing: border-box; }
+.search-input {
+  width: 100%; max-width: 320px; box-sizing: border-box; font: inherit; font-size: 1rem;
+  padding: 8px 14px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--ink);
+}
+.search-input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+.search-list {
+  position: absolute; top: calc(100% + 4px); left: 20px; width: min(360px, calc(100% - 40px));
+  margin: 0; padding: 4px; list-style: none; background: var(--surface); border: 1px solid var(--line);
+  border-radius: 12px; box-shadow: 0 8px 24px rgb(0 0 0 / 0.12);
+}
+.search-opt { display: flex; justify-content: space-between; gap: 12px; padding: 8px 10px; border-radius: 8px; cursor: pointer; }
+.search-opt.is-active, .search-opt:hover { background: color-mix(in srgb, var(--accent) 14%, transparent); }
+.search-hint { color: var(--muted); font-size: 0.85rem; text-align: right; }
+@media (min-width: 900px) {
+  .search { position: absolute; top: 16px; left: 16px; margin: 0; padding: 0; width: 320px; }
+  .search-list { left: 0; width: 100%; }
+}
+@media (max-width: 560px) { .search { padding: 0 14px; } .search-list { left: 14px; width: calc(100% - 28px); } }
+
 /* Taste wheel */
-.wheel { display: block; width: 100%; max-width: 640px; height: auto; margin: 12px auto 8px; touch-action: manipulation; }
+.wheel { display: block; width: 100%; max-width: 640px; height: auto; margin: 32px auto 8px; touch-action: manipulation; }
+@media (min-width: 900px) {
+  .wheel { max-width: min(640px, calc(100vh - 96px)); margin-top: 48px; }
+  /* Nothing below the wheel: centre it in the viewport. */
+  #app:has(> .wheel:only-child) { display: flex; flex-direction: column; justify-content: center; padding-bottom: 0; }
+  #app:has(> .wheel:only-child) .wheel { margin: 0 auto; }
+}
 .wheel a { cursor: pointer; outline: none; }
 .wheel-seg path { stroke: var(--bg); stroke-width: 2; transition: opacity 0.15s ease, filter 0.15s ease; }
 .wheel-seg:hover path, .wheel-seg:focus-visible path { filter: brightness(1.08) saturate(1.15); }

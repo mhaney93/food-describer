@@ -21,6 +21,13 @@ function svg(tag, attrs = {}, ...children) {
 
 const leaves = (n) => (n.scale ? 1 : n.children.reduce((s, c) => s + leaves(c), 0))
 
+// Segment order: data order when the node opts in with childOrder "natural",
+// otherwise alphabetical by label. Angle 0 is 12 o'clock; segments run clockwise.
+const ordered = (n) =>
+  n.childOrder === 'natural'
+    ? n.children
+    : [...n.children].sort((a, b) => a.label.localeCompare(b.label, undefined, { sensitivity: 'base' }))
+
 const pt = (r, a) => `${(r * Math.sin(a)).toFixed(2)} ${(-r * Math.cos(a)).toFixed(2)}`
 
 function arcPath(r0, r1, a0, a1) {
@@ -107,17 +114,18 @@ export function renderWheel(chain, hrefFor) {
     const [r0, r1] = [RADII[depth] + 2, RADII[depth + 1]]
     // Natural weights: equal for the top ring, leaf counts below. The open
     // segment is then widened to OPEN_SHARE so its children stay legible.
-    const weights = parent.children.map((c) => (depth === 0 ? 1 : leaves(c)))
+    const kids = ordered(parent)
+    const weights = kids.map((c) => (depth === 0 ? 1 : leaves(c)))
     const sum = weights.reduce((x, y) => x + y, 0)
     let fracs = weights.map((w) => w / sum)
-    const si = parent.children.indexOf(selected)
+    const si = kids.indexOf(selected)
     if (si >= 0 && fracs[si] < OPEN_SHARE && fracs.length > 1) {
       const rest = 1 - fracs[si]
       fracs = fracs.map((f, i) => (i === si ? OPEN_SHARE : (f * (1 - OPEN_SHARE)) / rest))
     }
     let a = span[0]
     let nextSpan = null
-    parent.children.forEach((c, i) => {
+    kids.forEach((c, i) => {
       const a0 = a
       const a1 = a + (span[1] - span[0]) * fracs[i]
       a = a1
@@ -149,11 +157,11 @@ export function renderWheel(chain, hrefFor) {
   const center = svg(
     'a',
     {
-      href: hrefFor(chain.length > 1 ? chain.slice(0, -1) : chain),
+      href: hrefFor(chain.slice(0, 1)),
       class: 'wheel-center',
-      'aria-label': chain.length > 1 ? 'Go back up one level' : root.label,
+      'aria-label': chain.length > 1 ? 'Reset to all categories' : root.label,
     },
-    svg('title', {}, chain.length > 1 ? 'Back' : 'Food Describer'),
+    svg('title', {}, chain.length > 1 ? 'Reset' : 'Food Describer'),
     svg('circle', { r: CENTER_R - 2 }),
     svg('image', { href: `${import.meta.env.BASE_URL}tongue.svg`, x: -60, y: -60, width: 120, height: 120 }),
   )

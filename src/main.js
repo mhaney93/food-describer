@@ -47,29 +47,6 @@ function el(tag, attrs = {}, ...children) {
   return node
 }
 
-function breadcrumb(chain) {
-  return el(
-    'nav',
-    { class: 'crumbs', 'aria-label': 'Breadcrumb' },
-    chain.length > 1
-      ? el('a', { class: 'back', href: hrefFor(chain.slice(0, -1)), 'aria-label': 'Back' }, '← Back')
-      : null,
-    el(
-      'ol',
-      {},
-      chain.map((n, i) =>
-        el(
-          'li',
-          {},
-          i === chain.length - 1
-            ? el('span', { 'aria-current': 'page' }, n.label)
-            : el('a', { href: hrefFor(chain.slice(0, i + 1)) }, n.label),
-        ),
-      ),
-    ),
-  )
-}
-
 function renderBranch(chain) {
   const node = chain.at(-1)
   if (chain.length === 1) return []
@@ -158,7 +135,6 @@ function render() {
   document.title = chain.length > 1 ? `${node.label} · Food Describer` : 'Food Describer'
   app.replaceChildren(
     ...[
-      chain.length > 1 ? breadcrumb(chain) : null,
       renderWheel(chain, hrefFor),
       ...(node.scale ? renderScale(chain, word) : renderBranch(chain)),
     ].filter(Boolean),
@@ -171,7 +147,99 @@ function render() {
   }
 }
 
+// Search: index every category label, descriptor word and synonym at load.
+function buildIndex() {
+  const out = []
+  const walk = (chain) => {
+    const n = chain.at(-1)
+    if (chain.length > 1) out.push({ text: n.label, hint: chain.slice(1, -1).map((c) => c.label).join(' › '), chain })
+    for (const c of n.children || []) walk([...chain, c])
+    for (const w of n.scale || []) {
+      out.push({ text: w.word, hint: n.label, chain, word: w.word })
+      for (const s of w.synonyms || []) out.push({ text: s, to: w.word, hint: n.label, chain, word: w.word })
+    }
+  }
+  walk([root])
+  return out
+}
+const searchIndex = buildIndex()
+
+function searchMatches(q) {
+  q = q.trim().toLowerCase()
+  if (!q) return []
+  const seen = new Set()
+  return searchIndex
+    .map((e) => ({ e, pos: e.text.toLowerCase().indexOf(q) }))
+    .filter(({ pos }) => pos >= 0)
+    .sort((a, b) => (a.pos !== 0) - (b.pos !== 0) || a.e.text.length - b.e.text.length || a.e.text.localeCompare(b.e.text))
+    .map(({ e }) => e)
+    .filter((e) => {
+      const key = `${e.text.toLowerCase()}|${hrefFor(e.chain, e.word)}`
+      return seen.has(key) ? false : seen.add(key)
+    })
+    .slice(0, 8)
+}
+
+function mountSearch() {
+  const input = el('input', {
+    type: 'search', class: 'search-input', placeholder: 'Search words…', autocomplete: 'off',
+    'aria-label': 'Search categories and words', role: 'combobox', 'aria-expanded': 'false',
+    'aria-controls': 'search-list', 'aria-autocomplete': 'list',
+  })
+  const list = el('ul', { id: 'search-list', class: 'search-list', role: 'listbox', hidden: true })
+  let results = []
+  let active = 0
+  const close = () => { list.hidden = true; input.setAttribute('aria-expanded', 'false') }
+  const pick = (e) => {
+    input.value = ''
+    close()
+    input.blur()
+    location.hash = hrefFor(e.chain, e.word)
+  }
+  const draw = () => {
+    list.replaceChildren(
+      ...results.map((e, i) =>
+        el(
+          'li',
+          {
+            role: 'option', id: `search-opt-${i}`, class: `search-opt${i === active ? ' is-active' : ''}`,
+            'aria-selected': i === active ? 'true' : 'false',
+            onmousedown: (ev) => { ev.preventDefault(); pick(e) },
+          },
+          el('span', { class: 'search-text' }, e.to ? `${e.text} → ${e.to}` : e.text),
+          e.hint ? el('span', { class: 'search-hint' }, e.hint) : null,
+        ),
+      ),
+    )
+    list.hidden = !results.length
+    input.setAttribute('aria-expanded', results.length ? 'true' : 'false')
+    if (results.length) input.setAttribute('aria-activedescendant', `search-opt-${active}`)
+    else input.removeAttribute('aria-activedescendant')
+  }
+  input.addEventListener('input', () => { results = searchMatches(input.value); active = 0; draw() })
+  input.addEventListener('keydown', (ev) => {
+    if (ev.key === 'Enter') { if (results[active]) { ev.preventDefault(); pick(results[active]) } }
+    else if (ev.key === 'Escape') { ev.preventDefault(); input.value = ''; results = []; draw() }
+    else if (ev.key === 'ArrowDown' && results.length) { ev.preventDefault(); active = (active + 1) % results.length; draw() }
+    else if (ev.key === 'ArrowUp' && results.length) { ev.preventDefault(); active = (active - 1 + results.length) % results.length; draw() }
+  })
+  input.addEventListener('blur', close)
+  input.addEventListener('focus', () => { if (results.length) draw() })
+  app.before(el('div', { class: 'search', role: 'search' }, input, list))
+}
+mountSearch()
+
+// Tapping the tongue resets the wheel: clear the hash entirely and re-render.
+app.addEventListener('click', (e) => {
+  if (!e.target.closest('.wheel-center')) return
+  e.preventDefault()
+  if (location.hash) history.pushState(null, '', location.pathname + location.search)
+  lastPath = ''
+  render()
+})
+
 let lastPath = location.hash.split('?')[0]
+window.addEventListener('popstate', () => render())
 window.addEventListener('hashchange', () => {
   const path = location.hash.split('?')[0]
   render()
