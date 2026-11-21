@@ -155,7 +155,7 @@ export function renderWheel(chain, hrefFor) {
     },
     svg('title', {}, chain.length > 1 ? 'Back' : 'Food Describer'),
     svg('circle', { r: CENTER_R - 2 }),
-    svg('text', { 'text-anchor': 'middle', 'dominant-baseline': 'central', 'font-size': 84, y: 4 }, '👅'),
+    svg('image', { href: `${import.meta.env.BASE_URL}tongue.svg`, x: -60, y: -60, width: 120, height: 120 }),
   )
 
   return svg(

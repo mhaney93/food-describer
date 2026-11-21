@@ -34,9 +34,8 @@
 body { margin: 0; min-height: 100vh; display: flex; flex-direction: column; }
 a { color: var(--accent); }
 
-#app, .site-footer { width: 100%; max-width: 960px; margin: 0 auto; padding: 0 20px; }
+#app { width: 100%; max-width: 960px; margin: 0 auto; padding: 0 20px; }
 #app { flex: 1; padding-bottom: 40px; }
-.site-footer { color: var(--muted); font-size: 0.85rem; padding-bottom: 28px; border-top: 1px solid var(--line); padding-top: 16px; }
 
 .crumbs { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin: 20px 0 8px; font-size: 0.9rem; }
 .crumbs ol { display: flex; flex-wrap: wrap; list-style: none; margin: 0; padding: 0; gap: 4px; }
@@ -53,13 +52,6 @@ a { color: var(--accent); }
 .science { font-size: 0.92rem; }
 .science strong { color: var(--pe); }
 
-.badge {
-  display: inline-block; margin-left: 8px; padding: 0 6px; border-radius: 6px;
-  font-size: 0.68rem; font-weight: 700; letter-spacing: 0.04em; vertical-align: middle; line-height: 1.6;
-}
-.badge-sensory { background: color-mix(in srgb, var(--muted) 16%, transparent); color: var(--muted); }
-.site-footer .badge { margin: 0 2px; }
-
 /* Taste wheel */
 .wheel { display: block; width: 100%; max-width: 640px; height: auto; margin: 12px auto 8px; touch-action: manipulation; }
 .wheel a { cursor: pointer; outline: none; }
@@ -71,7 +63,7 @@ a { color: var(--accent); }
 .wheel-label { fill: #2b211c; font-weight: 700; pointer-events: none; user-select: none; }
 .wheel-center circle { fill: var(--surface); stroke: var(--line); stroke-width: 3; }
 .wheel-center:hover circle, .wheel-center:focus-visible circle { stroke: var(--accent); }
-.wheel-center text { pointer-events: none; }
+.wheel-center image { pointer-events: none; }
 
 /* Mild → intense scale */
 .scale {
@@ -117,24 +109,12 @@ a { color: var(--accent); }
   margin: 12px 0 0; padding: 14px 18px; border-radius: var(--radius);
   border-left: 4px solid var(--accent); background: var(--surface);
 }
-.detail h2 { margin: 0 0 4px; font-size: 1.3rem; }
 .detail p { margin: 0 0 6px; }
-
-.glossary { list-style: none; margin: 24px 0 0; padding: 0; display: grid; gap: 2px; }
-.glossary li {
-  display: grid; grid-template-columns: 28px 1fr; gap: 10px; align-items: start;
-  padding: 10px 8px; border-radius: 10px;
-}
-.glossary li.is-active { background: color-mix(in srgb, var(--accent) 10%, transparent); }
-.glossary-rank {
-  display: inline-grid; place-items: center; width: 24px; height: 24px; border-radius: 50%;
-  font-size: 0.75rem; font-weight: 700; color: var(--muted); border: 1px solid var(--line);
-}
-.glossary-meaning { color: var(--ink); }
-.glossary-science { display: block; color: var(--muted); font-size: 0.85rem; margin-top: 2px; }
+.synonyms { color: var(--muted); font-size: 0.92rem; }
+.synonyms span { font-weight: 600; }
 
 @media (max-width: 560px) {
-  #app, .site-footer { padding-left: 14px; padding-right: 14px; }
+  #app { padding-left: 14px; padding-right: 14px; }
   .scale { --min-col: 72px; }
   .word-label { font-size: 0.8rem; }
 }

@@ -47,13 +47,6 @@ function el(tag, attrs = {}, ...children) {
   return node
 }
 
-function badge(source) {
-  return source === 'pe'
-    ? null
-    : el('span', { class: 'badge badge-sensory', title: 'Standard sensory-science vocabulary' }, 'std')
-}
-
-
 function breadcrumb(chain) {
   return el(
     'nav',
@@ -107,9 +100,7 @@ function renderScale(chain, selected) {
     el(
       'section',
       { class: 'intro' },
-      el('h1', {}, node.label),
       el('p', {}, node.summary),
-      node.science ? el('p', { class: 'science' }, el('strong', {}, 'Why: '), node.science) : null,
     ),
     el(
       'section',
@@ -151,30 +142,12 @@ function renderScale(chain, selected) {
       ? el(
           'section',
           { class: 'detail' },
-          el('h2', {}, current.word, badge(current.source)),
           el('p', {}, current.meaning),
-          current.science ? el('p', { class: 'science' }, el('strong', {}, 'Food science: '), current.science) : null,
+          current.synonyms?.length
+            ? el('p', { class: 'synonyms' }, el('span', {}, 'Similar: '), current.synonyms.join(', '))
+            : null,
         )
       : el('p', { class: 'hint' }, 'Tap a word on the scale to highlight it.'),
-    el(
-      'ol',
-      { class: 'glossary' },
-      words.map((w, i) =>
-        el(
-          'li',
-          { class: current === w ? 'is-active' : null },
-          el('span', { class: 'glossary-rank', 'aria-hidden': 'true' }, String(i + 1)),
-          el(
-            'div',
-            {},
-            el('strong', {}, w.word),
-            badge(w.source),
-            el('span', { class: 'glossary-meaning' }, ` ${w.meaning}`),
-            w.science ? el('span', { class: 'glossary-science' }, w.science) : null,
-          ),
-        ),
-      ),
-    ),
   ]
 }
 

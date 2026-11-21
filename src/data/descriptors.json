@@ -1,6 +1,6 @@
 {
-  "version": 1,
-  "updated": "2026-11-20",
+  "version": 2,
+  "updated": "2026-11-21",
   "sources": {
     "pe": {
       "name": "Project Everything",
@@ -28,12 +28,12 @@
           "source": "pe",
           "science": "Sugars such as sucrose and fructose (and sweeteners) bind the T1R2/T1R3 sweet receptor.",
           "scale": [
-            { "word": "Mellow", "meaning": "A soft, understated sweetness that is gentle and unassuming.", "source": "pe", "peLabel": "Mellow|sweet" },
-            { "word": "Honeyed", "meaning": "A warm, floral sweetness characteristic of honey.", "source": "pe" },
-            { "word": "Sugary", "meaning": "A straightforward, clean sweetness like table sugar.", "source": "pe", "science": "Sucrose: the reference sweetness most sweeteners are rated against." },
-            { "word": "Candy-like", "meaning": "An intense, confectionery sweetness like hard candy.", "source": "pe" },
-            { "word": "Saccharine", "meaning": "An overly sweet, artificial quality reminiscent of synthetic sweeteners.", "source": "pe", "science": "High-potency sweeteners often also trigger bitter receptors, giving a lingering, artificial edge." },
-            { "word": "Cloying", "meaning": "An excessively sweet quality that becomes unpleasant or overwhelming.", "source": "pe", "peLabel": "Cloying (negatively sweet)" }
+            { "word": "Mellow", "meaning": "A soft, understated sweetness that is gentle and unassuming.", "synonyms": ["gently sweet", "soft"], "source": "pe", "peLabel": "Mellow|sweet" },
+            { "word": "Honeyed", "meaning": "A warm, floral sweetness characteristic of honey.", "synonyms": ["honey-sweet", "nectar-like"], "source": "pe" },
+            { "word": "Sugary", "meaning": "A straightforward, clean sweetness like table sugar.", "synonyms": ["sweet", "sugared"], "source": "pe", "science": "Sucrose: the reference sweetness most sweeteners are rated against." },
+            { "word": "Candy-like", "meaning": "An intense, confectionery sweetness like hard candy.", "synonyms": ["confectionery", "lollipop-sweet"], "source": "pe" },
+            { "word": "Saccharine", "meaning": "An overly sweet, artificial quality reminiscent of synthetic sweeteners.", "synonyms": ["overly sweet", "syrupy-sweet"], "source": "pe", "science": "High-potency sweeteners often also trigger bitter receptors, giving a lingering, artificial edge." },
+            { "word": "Cloying", "meaning": "An excessively sweet quality that becomes unpleasant or overwhelming.", "synonyms": ["sickly sweet", "overpowering"], "source": "pe", "peLabel": "Cloying (negatively sweet)" }
           ]
         },
         {
@@ -44,13 +44,13 @@
           "peLabel": "Sour/Acid",
           "science": "Hydrogen ions released by acids (citric, malic, lactic, acetic) enter sour-sensing cells through the OTOP1 proton channel.",
           "scale": [
-            { "word": "Tangy", "meaning": "A lively, stimulating sourness with a pleasant bite.", "source": "pe", "science": "Often lactic acid, as in yogurt and buttermilk." },
-            { "word": "Tart", "meaning": "A pleasantly sharp, mouth-watering sourness.", "source": "pe", "science": "Malic acid, as in green apples and cherries." },
-            { "word": "Lemony", "meaning": "A bright, citrus-forward sourness reminiscent of lemon juice.", "source": "pe", "peLabel": "Lemony|sour", "science": "Citric acid." },
-            { "word": "Acidic", "meaning": "A clean, sharp sourness from high acid content.", "source": "pe" },
-            { "word": "Vinegary", "meaning": "A pungent, sharp sourness characteristic of acetic acid.", "source": "pe", "science": "Acetic acid is volatile, so it is smelled as well as tasted." },
-            { "word": "Sharp", "meaning": "An intense, penetrating sourness that stands out prominently.", "source": "pe", "peLabel": "Sharp|sour" },
-            { "word": "Puckering", "meaning": "An intense sourness that causes the mouth to pucker.", "source": "pe", "peLabel": "Puckering|sour" }
+            { "word": "Tangy", "meaning": "A lively, stimulating sourness with a pleasant bite.", "synonyms": ["zippy", "zingy"], "source": "pe", "science": "Often lactic acid, as in yogurt and buttermilk." },
+            { "word": "Tart", "meaning": "A pleasantly sharp, mouth-watering sourness.", "synonyms": ["sourish", "sharp-edged"], "source": "pe", "science": "Malic acid, as in green apples and cherries." },
+            { "word": "Lemony", "meaning": "A bright, citrus-forward sourness reminiscent of lemon juice.", "synonyms": ["citrusy", "citric"], "source": "pe", "peLabel": "Lemony|sour", "science": "Citric acid." },
+            { "word": "Acidic", "meaning": "A clean, sharp sourness from high acid content.", "synonyms": ["acid", "sour"], "source": "pe" },
+            { "word": "Vinegary", "meaning": "A pungent, sharp sourness characteristic of acetic acid.", "synonyms": ["acetic", "pickled"], "source": "pe", "science": "Acetic acid is volatile, so it is smelled as well as tasted." },
+            { "word": "Sharp", "meaning": "An intense, penetrating sourness that stands out prominently.", "synonyms": ["piercing", "cutting"], "source": "pe", "peLabel": "Sharp|sour" },
+            { "word": "Puckering", "meaning": "An intense sourness that causes the mouth to pucker.", "synonyms": ["mouth-puckering", "eye-watering"], "source": "pe", "peLabel": "Puckering|sour" }
           ]
         },
         {
@@ -60,11 +60,11 @@
           "source": "pe",
           "science": "Sodium ions pass through ENaC channels on taste cells; modest salt also suppresses bitterness, which is why it 'brings out' flavor.",
           "scale": [
-            { "word": "Seasoned", "meaning": "A balanced, well-distributed saltiness that enhances overall flavor.", "source": "pe" },
-            { "word": "Saline", "meaning": "A clean, neutral saltiness resembling dissolved sea salt.", "source": "pe" },
-            { "word": "Oceanic", "meaning": "A saltiness with aquatic, mineral notes evocative of the sea.", "source": "pe" },
-            { "word": "Briny", "meaning": "A saltiness with mineral oceanic notes, like seawater or pickles.", "source": "pe" },
-            { "word": "Oversalted", "meaning": "Salt dominates and masks the other flavors; harsh at the back of the tongue.", "source": "sensory", "science": "At high concentrations salt also activates sour and bitter cells, which is why too much salt tastes harsh." }
+            { "word": "Seasoned", "meaning": "A balanced, well-distributed saltiness that enhances overall flavor.", "synonyms": ["lightly salted"], "source": "pe" },
+            { "word": "Saline", "meaning": "A clean, neutral saltiness resembling dissolved sea salt.", "synonyms": ["salted"], "source": "pe" },
+            { "word": "Oceanic", "meaning": "A saltiness with aquatic, mineral notes evocative of the sea.", "synonyms": ["sea-like", "seaside"], "source": "pe" },
+            { "word": "Briny", "meaning": "A saltiness with mineral oceanic notes, like seawater or pickles.", "synonyms": ["pickle-brine", "salty"], "source": "pe" },
+            { "word": "Oversalted", "meaning": "Salt dominates and masks the other flavors; harsh at the back of the tongue.", "synonyms": ["too salty", "salt-heavy"], "source": "sensory", "science": "At high concentrations salt also activates sour and bitter cells, which is why too much salt tastes harsh." }
           ]
         },
         {
@@ -74,13 +74,13 @@
           "source": "pe",
           "science": "Alkaloids (caffeine, quinine), polyphenols and some peptides activate the ~25 TAS2R bitter receptors.",
           "scale": [
-            { "word": "Unsweetened", "meaning": "A clean bitterness with no sugar to balance it, as in dark chocolate.", "source": "pe" },
-            { "word": "Medicinal", "meaning": "A bitter quality reminiscent of medicine or certain botanicals.", "source": "pe", "science": "Quinine in tonic water is the classic example." },
-            { "word": "Pungent", "meaning": "A strong, penetrating bitterness with intense aroma.", "source": "pe", "peLabel": "Pungent|bitter" },
-            { "word": "Sharp", "meaning": "An intense, cutting bitterness with an immediate impact.", "source": "pe", "peLabel": "Sharp|bitter" },
-            { "word": "Biting", "meaning": "A sharp bitterness with an assertive, stinging quality.", "source": "pe" },
-            { "word": "Harsh", "meaning": "A rough, aggressive bitterness that lacks finesse.", "source": "pe" },
-            { "word": "Acrid", "meaning": "A harsh, irritating bitterness that is unpleasant and sharp.", "source": "pe" }
+            { "word": "Unsweetened", "meaning": "A clean bitterness with no sugar to balance it, as in dark chocolate.", "synonyms": ["bittersweet", "dark"], "source": "pe" },
+            { "word": "Medicinal", "meaning": "A bitter quality reminiscent of medicine or certain botanicals.", "synonyms": ["quinine-like", "tonic-like"], "source": "pe", "science": "Quinine in tonic water is the classic example." },
+            { "word": "Pungent", "meaning": "A strong, penetrating bitterness with intense aroma.", "synonyms": ["bracing"], "source": "pe", "peLabel": "Pungent|bitter" },
+            { "word": "Sharp", "meaning": "An intense, cutting bitterness with an immediate impact.", "synonyms": ["piercing"], "source": "pe", "peLabel": "Sharp|bitter" },
+            { "word": "Biting", "meaning": "A sharp bitterness with an assertive, stinging quality.", "synonyms": ["bracing", "stinging"], "source": "pe" },
+            { "word": "Harsh", "meaning": "A rough, aggressive bitterness that lacks finesse.", "synonyms": ["rough", "abrasive"], "source": "pe" },
+            { "word": "Acrid", "meaning": "A harsh, irritating bitterness that is unpleasant and sharp.", "synonyms": ["caustic", "bitter-burnt"], "source": "pe" }
           ]
         },
         {
@@ -90,11 +90,11 @@
           "source": "pe",
           "science": "Glutamate binds the T1R1/T1R3 receptor; nucleotides (IMP in meat and fish, GMP in dried mushrooms) multiply the effect synergistically.",
           "scale": [
-            { "word": "Nuanced", "meaning": "A subtle, complex umami that reveals itself gradually.", "source": "pe" },
-            { "word": "Brothy", "meaning": "A warm, savory umami quality like a rich stock or soup base.", "source": "pe" },
-            { "word": "Mushroomy", "meaning": "An earthy, savory umami quality characteristic of mushrooms.", "source": "pe", "peLabel": "Mushroomy|umami", "science": "Dried shiitake are rich in guanylate (GMP)." },
-            { "word": "Meaty", "meaning": "A savory depth reminiscent of cooked meat and protein-rich foods.", "source": "pe", "peLabel": "Meaty|umami", "science": "Inosinate (IMP) plus free glutamate released as proteins break down." },
-            { "word": "Rich", "meaning": "A deep, full umami character with layered savory complexity.", "source": "pe", "peLabel": "Rich|umami" }
+            { "word": "Nuanced", "meaning": "A subtle, complex umami that reveals itself gradually.", "synonyms": ["subtly savory"], "source": "pe" },
+            { "word": "Brothy", "meaning": "A warm, savory umami quality like a rich stock or soup base.", "synonyms": ["stock-like", "savory"], "source": "pe" },
+            { "word": "Mushroomy", "meaning": "An earthy, savory umami quality characteristic of mushrooms.", "synonyms": ["fungal"], "source": "pe", "peLabel": "Mushroomy|umami", "science": "Dried shiitake are rich in guanylate (GMP)." },
+            { "word": "Meaty", "meaning": "A savory depth reminiscent of cooked meat and protein-rich foods.", "synonyms": ["beefy"], "source": "pe", "peLabel": "Meaty|umami", "science": "Inosinate (IMP) plus free glutamate released as proteins break down." },
+            { "word": "Rich", "meaning": "A deep, full umami character with layered savory complexity.", "synonyms": ["deeply savory", "full-bodied"], "source": "pe", "peLabel": "Rich|umami" }
           ]
         },
         {
@@ -104,11 +104,11 @@
           "source": "pe",
           "peLabel": "Other Taste Qualities",
           "scale": [
-            { "word": "Water-like", "meaning": "A neutral, flat taste quality with no distinct flavor profile.", "source": "pe" },
-            { "word": "Mineral", "meaning": "A faint stony or flinty impression, like spring water or some white wines.", "source": "sensory" },
-            { "word": "Earthy", "meaning": "A grounded, soil-like taste quality from minerals or organic compounds.", "source": "pe", "peLabel": "Earthy|taste" },
-            { "word": "Chalky", "meaning": "A chalky, mineral taste associated with calcium-rich foods.", "source": "pe", "peLabel": "Calcium|taste" },
-            { "word": "Metallic", "meaning": "An unpleasant taste reminiscent of metal, often from minerals or certain foods.", "source": "pe", "peLabel": "Metallic|taste", "science": "Iron and copper ions, and oxidized fats, are common causes." }
+            { "word": "Water-like", "meaning": "A neutral, flat taste quality with no distinct flavor profile.", "synonyms": ["neutral", "clean"], "source": "pe" },
+            { "word": "Mineral", "meaning": "A faint stony or flinty impression, like spring water or some white wines.", "synonyms": ["flinty", "stony"], "source": "sensory" },
+            { "word": "Earthy", "meaning": "A grounded, soil-like taste quality from minerals or organic compounds.", "synonyms": ["soil-like"], "source": "pe", "peLabel": "Earthy|taste" },
+            { "word": "Chalky", "meaning": "A chalky, mineral taste associated with calcium-rich foods.", "synonyms": ["limestone-like"], "source": "pe", "peLabel": "Calcium|taste" },
+            { "word": "Metallic", "meaning": "An unpleasant taste reminiscent of metal, often from minerals or certain foods.", "synonyms": ["tinny", "coppery"], "source": "pe", "peLabel": "Metallic|taste", "science": "Iron and copper ions, and oxidized fats, are common causes." }
           ]
         }
       ]
@@ -135,11 +135,11 @@
               "source": "pe",
               "peLabel": "Citrusy",
               "scale": [
-                { "word": "Orangey", "meaning": "A warm, sweet citrus aroma reminiscent of fresh orange peel.", "source": "pe", "science": "Limonene dominates orange peel oil." },
-                { "word": "Lemony", "meaning": "A bright, zesty aroma characteristic of fresh lemon peel and juice.", "source": "pe", "peLabel": "Lemony|citrus", "science": "Citral gives lemon its sharper note." },
-                { "word": "Limey", "meaning": "A green, sharper citrus aroma, slightly floral.", "source": "sensory" },
-                { "word": "Zesty", "meaning": "A sharp, citrus-forward brightness that is lively and refreshing.", "source": "pe" },
-                { "word": "Pithy", "meaning": "A bitter-edged peel aroma, like grapefruit or the white pith of citrus.", "source": "sensory", "science": "Nootkatone (grapefruit) and bitter flavonoids such as naringin." }
+                { "word": "Orangey", "meaning": "A warm, sweet citrus aroma reminiscent of fresh orange peel.", "synonyms": ["orange-like", "tangerine"], "source": "pe", "science": "Limonene dominates orange peel oil." },
+                { "word": "Lemony", "meaning": "A bright, zesty aroma characteristic of fresh lemon peel and juice.", "synonyms": ["lemon-like", "citrusy"], "source": "pe", "peLabel": "Lemony|citrus", "science": "Citral gives lemon its sharper note." },
+                { "word": "Limey", "meaning": "A green, sharper citrus aroma, slightly floral.", "synonyms": ["lime-like"], "source": "sensory" },
+                { "word": "Zesty", "meaning": "A sharp, citrus-forward brightness that is lively and refreshing.", "synonyms": ["peel-like", "bright"], "source": "pe" },
+                { "word": "Pithy", "meaning": "A bitter-edged peel aroma, like grapefruit or the white pith of citrus.", "synonyms": ["peel-bitter"], "source": "sensory", "science": "Nootkatone (grapefruit) and bitter flavonoids such as naringin." }
               ]
             },
             {
@@ -149,10 +149,10 @@
               "source": "pe",
               "peLabel": "Berry-Like",
               "scale": [
-                { "word": "Blueberry", "meaning": "A mild, sweet-tart aroma reminiscent of fresh blueberries.", "source": "pe", "peLabel": "Blueberry|aroma" },
-                { "word": "Strawberry", "meaning": "A sweet, fruity aroma characteristic of fresh strawberries.", "source": "pe", "peLabel": "Strawberry|aroma", "science": "Furaneol gives strawberries their sweet, caramel-like note." },
-                { "word": "Raspberry", "meaning": "A perfumed, tangy berry aroma.", "source": "sensory", "science": "Raspberry ketone." },
-                { "word": "Jammy", "meaning": "A concentrated, cooked-berry aroma like jam or very ripe fruit.", "source": "sensory" }
+                { "word": "Blueberry", "meaning": "A mild, sweet-tart aroma reminiscent of fresh blueberries.", "synonyms": [], "source": "pe", "peLabel": "Blueberry|aroma" },
+                { "word": "Strawberry", "meaning": "A sweet, fruity aroma characteristic of fresh strawberries.", "synonyms": [], "source": "pe", "peLabel": "Strawberry|aroma", "science": "Furaneol gives strawberries their sweet, caramel-like note." },
+                { "word": "Raspberry", "meaning": "A perfumed, tangy berry aroma.", "synonyms": [], "source": "sensory", "science": "Raspberry ketone." },
+                { "word": "Jammy", "meaning": "A concentrated, cooked-berry aroma like jam or very ripe fruit.", "synonyms": ["stewed fruit", "preserve-like"], "source": "sensory" }
               ]
             },
             {
@@ -162,10 +162,10 @@
               "source": "pe",
               "peLabel": "Tropical|aroma",
               "scale": [
-                { "word": "Banana-like", "meaning": "A sweet, slightly starchy aroma characteristic of ripe bananas.", "source": "pe", "science": "Isoamyl acetate." },
-                { "word": "Pineapple", "meaning": "A bright, sweet-tart aroma characteristic of fresh pineapple.", "source": "pe", "peLabel": "Pineapple|aroma" },
-                { "word": "Mango", "meaning": "A sweet, exotic aroma reminiscent of ripe mango.", "source": "pe", "peLabel": "Mango|aroma" },
-                { "word": "Passion fruit", "meaning": "An intensely tropical, almost sulfury-sweet aroma.", "source": "sensory", "science": "Sulfur-containing thiols contribute the 'catty' tropical punch." }
+                { "word": "Banana-like", "meaning": "A sweet, slightly starchy aroma characteristic of ripe bananas.", "synonyms": ["banana"], "source": "pe", "science": "Isoamyl acetate." },
+                { "word": "Pineapple", "meaning": "A bright, sweet-tart aroma characteristic of fresh pineapple.", "synonyms": [], "source": "pe", "peLabel": "Pineapple|aroma" },
+                { "word": "Mango", "meaning": "A sweet, exotic aroma reminiscent of ripe mango.", "synonyms": [], "source": "pe", "peLabel": "Mango|aroma" },
+                { "word": "Passion fruit", "meaning": "An intensely tropical, almost sulfury-sweet aroma.", "synonyms": ["guava-like"], "source": "sensory", "science": "Sulfur-containing thiols contribute the 'catty' tropical punch." }
               ]
             },
             {
@@ -174,10 +174,10 @@
               "summary": "Fresh aromas of tree fruits like apples, pears and stone fruit.",
               "source": "sensory",
               "scale": [
-                { "word": "Apple-like", "meaning": "A fresh, clean fruity aroma reminiscent of ripe apples.", "source": "pe" },
-                { "word": "Pear-like", "meaning": "A soft, sweet, slightly floral fruit aroma.", "source": "sensory" },
-                { "word": "Peachy", "meaning": "A lush, ripe stone-fruit aroma.", "source": "sensory", "science": "Lactones such as gamma-decalactone." },
-                { "word": "Overripe", "meaning": "A heavy, fermented-fruit aroma, just past its best.", "source": "sensory" }
+                { "word": "Apple-like", "meaning": "A fresh, clean fruity aroma reminiscent of ripe apples.", "synonyms": ["apple"], "source": "pe" },
+                { "word": "Pear-like", "meaning": "A soft, sweet, slightly floral fruit aroma.", "synonyms": ["pear"], "source": "sensory" },
+                { "word": "Peachy", "meaning": "A lush, ripe stone-fruit aroma.", "synonyms": ["stone fruit", "apricot-like"], "source": "sensory", "science": "Lactones such as gamma-decalactone." },
+                { "word": "Overripe", "meaning": "A heavy, fermented-fruit aroma, just past its best.", "synonyms": ["fermented fruit", "mushy-sweet"], "source": "sensory" }
               ]
             }
           ]
@@ -190,11 +190,11 @@
           "peLabel": "Floral|aroma",
           "science": "Terpene alcohols such as linalool and geraniol, plus 2-phenylethanol (rose).",
           "scale": [
-            { "word": "Blossomy", "meaning": "A faint, fresh hint of flowers.", "source": "sensory" },
-            { "word": "Rose-like", "meaning": "A sweet, fragrant aroma characteristic of rose petals.", "source": "pe" },
-            { "word": "Lavender", "meaning": "A cool, herbal-floral aroma characteristic of lavender flowers.", "source": "pe" },
-            { "word": "Jasmine", "meaning": "A sweet, intensely floral aroma characteristic of jasmine flowers.", "source": "pe", "peLabel": "Jasmine|aroma" },
-            { "word": "Perfumed", "meaning": "An intense floral aroma that is strong and reminiscent of perfume.", "source": "pe" }
+            { "word": "Blossomy", "meaning": "A faint, fresh hint of flowers.", "synonyms": ["flowery", "blossom-like"], "source": "sensory" },
+            { "word": "Rose-like", "meaning": "A sweet, fragrant aroma characteristic of rose petals.", "synonyms": ["rosy"], "source": "pe" },
+            { "word": "Lavender", "meaning": "A cool, herbal-floral aroma characteristic of lavender flowers.", "synonyms": ["lavender-like"], "source": "pe" },
+            { "word": "Jasmine", "meaning": "A sweet, intensely floral aroma characteristic of jasmine flowers.", "synonyms": ["jasmine-like"], "source": "pe", "peLabel": "Jasmine|aroma" },
+            { "word": "Perfumed", "meaning": "An intense floral aroma that is strong and reminiscent of perfume.", "synonyms": ["perfumy", "soapy"], "source": "pe" }
           ]
         },
         {
@@ -204,12 +204,12 @@
           "source": "pe",
           "peLabel": "Spicy|aroma",
           "scale": [
-            { "word": "Aromatic", "meaning": "A pleasantly complex, fragrant aroma from herb and spice compounds.", "source": "pe" },
-            { "word": "Cinnamon", "meaning": "A warm, sweet spicy aroma characteristic of cinnamon bark.", "source": "pe", "peLabel": "Cinnamon|aroma", "science": "Cinnamaldehyde." },
-            { "word": "Peppery", "meaning": "A sharp, nose-tickling aroma from pepper compounds like piperine.", "source": "pe", "science": "Rotundone gives black pepper its aroma; piperine its bite." },
-            { "word": "Clove", "meaning": "An intense, warm, eugenol-rich aroma characteristic of dried cloves.", "source": "pe", "peLabel": "Clove|aroma", "science": "Eugenol." },
-            { "word": "Chili-like", "meaning": "A warm, pungent aroma from capsaicin and related compounds in chili peppers.", "source": "pe" },
-            { "word": "Pungent", "meaning": "An intensely sharp aroma that is strong and penetrating.", "source": "pe", "peLabel": "Pungent|spicy-aroma" }
+            { "word": "Aromatic", "meaning": "A pleasantly complex, fragrant aroma from herb and spice compounds.", "synonyms": ["fragrant", "spiced"], "source": "pe" },
+            { "word": "Cinnamon", "meaning": "A warm, sweet spicy aroma characteristic of cinnamon bark.", "synonyms": ["cassia-like"], "source": "pe", "peLabel": "Cinnamon|aroma", "science": "Cinnamaldehyde." },
+            { "word": "Peppery", "meaning": "A sharp, nose-tickling aroma from pepper compounds like piperine.", "synonyms": ["black-pepper"], "source": "pe", "science": "Rotundone gives black pepper its aroma; piperine its bite." },
+            { "word": "Clove", "meaning": "An intense, warm, eugenol-rich aroma characteristic of dried cloves.", "synonyms": ["clove-like"], "source": "pe", "peLabel": "Clove|aroma", "science": "Eugenol." },
+            { "word": "Chili-like", "meaning": "A warm, pungent aroma from capsaicin and related compounds in chili peppers.", "synonyms": ["capsicum"], "source": "pe" },
+            { "word": "Pungent", "meaning": "An intensely sharp aroma that is strong and penetrating.", "synonyms": ["sharp", "heady"], "source": "pe", "peLabel": "Pungent|spicy-aroma" }
           ]
         },
         {
@@ -220,10 +220,10 @@
           "peLabel": "Nutty|aroma",
           "science": "Pyrazines formed by Maillard browning give most roasted-nut notes.",
           "scale": [
-            { "word": "Almond", "meaning": "A sweet, slightly bitter aroma characteristic of almonds and benzaldehyde.", "source": "pe", "peLabel": "Almond|aroma", "science": "Benzaldehyde." },
-            { "word": "Hazelnut", "meaning": "A warm, toasty aroma characteristic of roasted hazelnuts.", "source": "pe", "science": "Filbertone." },
-            { "word": "Peanut", "meaning": "A rich, earthy aroma characteristic of roasted peanuts.", "source": "pe", "peLabel": "Peanut|aroma" },
-            { "word": "Roasted nut", "meaning": "A warm, toasted aroma from the Maillard reaction in nut roasting.", "source": "pe" }
+            { "word": "Almond", "meaning": "A sweet, slightly bitter aroma characteristic of almonds and benzaldehyde.", "synonyms": ["marzipan-like"], "source": "pe", "peLabel": "Almond|aroma", "science": "Benzaldehyde." },
+            { "word": "Hazelnut", "meaning": "A warm, toasty aroma characteristic of roasted hazelnuts.", "synonyms": ["praline-like"], "source": "pe", "science": "Filbertone." },
+            { "word": "Peanut", "meaning": "A rich, earthy aroma characteristic of roasted peanuts.", "synonyms": ["peanutty"], "source": "pe", "peLabel": "Peanut|aroma" },
+            { "word": "Roasted nut", "meaning": "A warm, toasted aroma from the Maillard reaction in nut roasting.", "synonyms": ["toasted nut"], "source": "pe" }
           ]
         },
         {
@@ -233,11 +233,11 @@
           "source": "pe",
           "peLabel": "Herbaceous",
           "scale": [
-            { "word": "Grassy", "meaning": "A fresh, green aroma reminiscent of cut grass or fresh herbs.", "source": "pe", "science": "'Green leaf volatiles' such as cis-3-hexenol, released when leaves are cut." },
-            { "word": "Basil-like", "meaning": "A sweet, slightly anise-tinged herbal aroma characteristic of fresh basil.", "source": "pe", "science": "Linalool and estragole." },
-            { "word": "Oregano-like", "meaning": "A warm, earthy herbal aroma characteristic of dried oregano.", "source": "pe", "science": "Carvacrol and thymol." },
-            { "word": "Piney", "meaning": "A resinous, sharp green aroma like rosemary or pine needles.", "source": "sensory", "science": "Pinene." },
-            { "word": "Minty", "meaning": "A cool, menthol-rich aroma characteristic of mint leaves.", "source": "pe", "science": "Menthol (peppermint) or carvone (spearmint)." }
+            { "word": "Grassy", "meaning": "A fresh, green aroma reminiscent of cut grass or fresh herbs.", "synonyms": ["green", "hay-like"], "source": "pe", "science": "'Green leaf volatiles' such as cis-3-hexenol, released when leaves are cut." },
+            { "word": "Basil-like", "meaning": "A sweet, slightly anise-tinged herbal aroma characteristic of fresh basil.", "synonyms": ["basil"], "source": "pe", "science": "Linalool and estragole." },
+            { "word": "Oregano-like", "meaning": "A warm, earthy herbal aroma characteristic of dried oregano.", "synonyms": ["oregano"], "source": "pe", "science": "Carvacrol and thymol." },
+            { "word": "Piney", "meaning": "A resinous, sharp green aroma like rosemary or pine needles.", "synonyms": ["resinous", "pine-like"], "source": "sensory", "science": "Pinene." },
+            { "word": "Minty", "meaning": "A cool, menthol-rich aroma characteristic of mint leaves.", "synonyms": ["mint-like"], "source": "pe", "science": "Menthol (peppermint) or carvone (spearmint)." }
           ]
         },
         {
@@ -247,11 +247,11 @@
           "source": "pe",
           "peLabel": "Woody/Earthy",
           "scale": [
-            { "word": "Mushroomy", "meaning": "An earthy, umami-adjacent aroma characteristic of mushrooms.", "source": "pe", "peLabel": "Mushroomy|aroma", "science": "1-octen-3-ol, the 'mushroom alcohol'." },
-            { "word": "Earthy", "meaning": "A damp-soil aroma, like beets or fresh rain on dirt.", "source": "sensory", "science": "Geosmin, which humans detect at parts per trillion." },
-            { "word": "Forest-like", "meaning": "A complex earthy aroma evoking the smell of a forest floor.", "source": "pe" },
-            { "word": "Woody", "meaning": "A dry, oaky or cedar-like aroma.", "source": "sensory", "science": "Vanillin and oak lactones from barrel aging." },
-            { "word": "Smoky", "meaning": "An aroma from combustion and pyrolysis compounds, reminiscent of wood smoke.", "source": "pe", "science": "Guaiacol and other phenols from burning lignin." }
+            { "word": "Mushroomy", "meaning": "An earthy, umami-adjacent aroma characteristic of mushrooms.", "synonyms": ["fungal"], "source": "pe", "peLabel": "Mushroomy|aroma", "science": "1-octen-3-ol, the 'mushroom alcohol'." },
+            { "word": "Earthy", "meaning": "A damp-soil aroma, like beets or fresh rain on dirt.", "synonyms": ["soil-like", "loamy"], "source": "sensory", "science": "Geosmin, which humans detect at parts per trillion." },
+            { "word": "Forest-like", "meaning": "A complex earthy aroma evoking the smell of a forest floor.", "synonyms": ["forest floor", "leafy"], "source": "pe" },
+            { "word": "Woody", "meaning": "A dry, oaky or cedar-like aroma.", "synonyms": ["oaky"], "source": "sensory", "science": "Vanillin and oak lactones from barrel aging." },
+            { "word": "Smoky", "meaning": "An aroma from combustion and pyrolysis compounds, reminiscent of wood smoke.", "synonyms": ["smoked"], "source": "pe", "science": "Guaiacol and other phenols from burning lignin." }
           ]
         },
         {
@@ -262,13 +262,13 @@
           "peLabel": "Caramelized/Toasted",
           "science": "Maillard reactions (sugars + amino acids, fast above ~140 °C) and caramelization (sugars alone, ~160 °C+) build hundreds of aroma compounds such as furans and pyrazines.",
           "scale": [
-            { "word": "Toasted", "meaning": "A mild, nutty aroma from light browning of grains or bread.", "source": "pe", "peLabel": "Toasted|aroma" },
-            { "word": "Caramelized", "meaning": "A rich, warm sweetness from caramelized sugars during cooking.", "source": "pe", "peLabel": "Sweet|caramelized" },
-            { "word": "Nutty-browned", "meaning": "A warm, toasty nutty aroma from caramelization and browning reactions.", "source": "pe", "peLabel": "Nutty|caramelized" },
-            { "word": "Browned", "meaning": "A complex, savory-sweet aroma from Maillard browning of proteins and sugars.", "source": "pe" },
-            { "word": "Roasted", "meaning": "A warm, caramelized aroma from high-heat cooking processes.", "source": "pe", "peLabel": "Roasted|aroma" },
-            { "word": "Charred", "meaning": "A bitter, smoky edge from heavy browning at the surface.", "source": "sensory" },
-            { "word": "Burnt", "meaning": "An undesirable acrid, char smell indicating food has been overcooked or burned.", "source": "pe", "peLabel": "Burnt|aroma" }
+            { "word": "Toasted", "meaning": "A mild, nutty aroma from light browning of grains or bread.", "synonyms": ["lightly toasted"], "source": "pe", "peLabel": "Toasted|aroma" },
+            { "word": "Caramelized", "meaning": "A rich, warm sweetness from caramelized sugars during cooking.", "synonyms": ["caramel", "toffee-like"], "source": "pe", "peLabel": "Sweet|caramelized" },
+            { "word": "Nutty-browned", "meaning": "A warm, toasty nutty aroma from caramelization and browning reactions.", "synonyms": ["brown-butter"], "source": "pe", "peLabel": "Nutty|caramelized" },
+            { "word": "Browned", "meaning": "A complex, savory-sweet aroma from Maillard browning of proteins and sugars.", "synonyms": ["seared"], "source": "pe" },
+            { "word": "Roasted", "meaning": "A warm, caramelized aroma from high-heat cooking processes.", "synonyms": ["oven-roasted"], "source": "pe", "peLabel": "Roasted|aroma" },
+            { "word": "Charred", "meaning": "A bitter, smoky edge from heavy browning at the surface.", "synonyms": ["blackened", "flame-kissed"], "source": "sensory" },
+            { "word": "Burnt", "meaning": "An undesirable acrid, char smell indicating food has been overcooked or burned.", "synonyms": ["scorched", "carbonized"], "source": "pe", "peLabel": "Burnt|aroma" }
           ]
         },
         {
@@ -278,11 +278,11 @@
           "source": "pe",
           "peLabel": "Animalic",
           "scale": [
-            { "word": "Buttery", "meaning": "A rich, creamy aroma characteristic of diacetyl in butter and cream.", "source": "pe", "peLabel": "Buttery|aroma", "science": "Diacetyl." },
-            { "word": "Meaty", "meaning": "A savory, protein-rich aroma from cooked meat and Maillard reaction products.", "source": "pe", "peLabel": "Meaty|aroma" },
-            { "word": "Cheesy", "meaning": "A sharp, fermented aroma from short-chain fatty acids in aged cheese.", "source": "pe", "science": "Butyric and other short-chain fatty acids." },
-            { "word": "Fishy", "meaning": "A briny, oceanic aroma from trimethylamine compounds in fish.", "source": "pe", "science": "Trimethylamine increases as fish ages; acid (lemon) binds it and reduces the smell." },
-            { "word": "Gamey", "meaning": "A strong, wild aroma from wild-caught meat or game animals.", "source": "pe" }
+            { "word": "Buttery", "meaning": "A rich, creamy aroma characteristic of diacetyl in butter and cream.", "synonyms": ["butter-like"], "source": "pe", "peLabel": "Buttery|aroma", "science": "Diacetyl." },
+            { "word": "Meaty", "meaning": "A savory, protein-rich aroma from cooked meat and Maillard reaction products.", "synonyms": ["beefy"], "source": "pe", "peLabel": "Meaty|aroma" },
+            { "word": "Cheesy", "meaning": "A sharp, fermented aroma from short-chain fatty acids in aged cheese.", "synonyms": ["cheese-like"], "source": "pe", "science": "Butyric and other short-chain fatty acids." },
+            { "word": "Fishy", "meaning": "A briny, oceanic aroma from trimethylamine compounds in fish.", "synonyms": ["seafood-like"], "source": "pe", "science": "Trimethylamine increases as fish ages; acid (lemon) binds it and reduces the smell." },
+            { "word": "Gamey", "meaning": "A strong, wild aroma from wild-caught meat or game animals.", "synonyms": ["wild", "feral"], "source": "pe" }
           ]
         },
         {
@@ -292,12 +292,12 @@
           "source": "pe",
           "peLabel": "Chemical/Off-Notes",
           "scale": [
-            { "word": "Stale", "meaning": "A flat, cardboard-like aroma from food that has sat too long.", "source": "sensory", "science": "Often trans-2-nonenal from slow fat oxidation." },
-            { "word": "Musty", "meaning": "A damp, stale aroma often from microbial activity or old storage.", "source": "pe", "science": "Trichloroanisole (TCA, 'corked' wine) and geosmin." },
-            { "word": "Metallic", "meaning": "An unpleasant aroma reminiscent of metal, often from oxidized fats or minerals.", "source": "pe", "peLabel": "Metallic|aroma" },
-            { "word": "Rancid", "meaning": "An unpleasant off-aroma from oxidized or hydrolyzed fats.", "source": "pe", "science": "Lipid oxidation produces hexanal and other aldehydes." },
-            { "word": "Moldy", "meaning": "An unpleasant fungal aroma indicating mold growth on food.", "source": "pe" },
-            { "word": "Sulfurous", "meaning": "A sharp, egg-like aroma from hydrogen sulfide and sulfur compounds.", "source": "pe", "science": "Hydrogen sulfide; overcooked eggs and brassicas release it." }
+            { "word": "Stale", "meaning": "A flat, cardboard-like aroma from food that has sat too long.", "synonyms": ["old", "flat"], "source": "sensory", "science": "Often trans-2-nonenal from slow fat oxidation." },
+            { "word": "Musty", "meaning": "A damp, stale aroma often from microbial activity or old storage.", "synonyms": ["damp", "cellar-like"], "source": "pe", "science": "Trichloroanisole (TCA, 'corked' wine) and geosmin." },
+            { "word": "Metallic", "meaning": "An unpleasant aroma reminiscent of metal, often from oxidized fats or minerals.", "synonyms": ["tinny"], "source": "pe", "peLabel": "Metallic|aroma" },
+            { "word": "Rancid", "meaning": "An unpleasant off-aroma from oxidized or hydrolyzed fats.", "synonyms": ["spoiled fat", "off"], "source": "pe", "science": "Lipid oxidation produces hexanal and other aldehydes." },
+            { "word": "Moldy", "meaning": "An unpleasant fungal aroma indicating mold growth on food.", "synonyms": ["mouldy"], "source": "pe" },
+            { "word": "Sulfurous", "meaning": "A sharp, egg-like aroma from hydrogen sulfide and sulfur compounds.", "synonyms": ["eggy"], "source": "pe", "science": "Hydrogen sulfide; overcooked eggs and brassicas release it." }
           ]
         }
       ]
@@ -316,15 +316,15 @@
           "source": "pe",
           "peLabel": "Hardness|texture + Softness|texture",
           "scale": [
-            { "word": "Mushy", "meaning": "An overly soft texture that has lost structural integrity.", "source": "pe", "science": "Cell walls (pectin) break down with overcooking or overripening." },
-            { "word": "Delicate", "meaning": "An extremely soft, fragile texture that breaks easily.", "source": "pe", "peLabel": "Delicate|softness" },
-            { "word": "Yielding", "meaning": "A texture that readily gives way to pressure without resistance.", "source": "pe" },
-            { "word": "Tender", "meaning": "A texture that is soft and easy to bite, yielding with little force.", "source": "pe", "science": "In meat, collagen converting to gelatin with slow cooking." },
-            { "word": "Firm", "meaning": "A texture that offers moderate resistance to biting, holding its shape well.", "source": "pe" },
-            { "word": "Dense", "meaning": "A tightly packed texture with little air or moisture, feeling heavy.", "source": "pe", "peLabel": "Dense/Compact" },
-            { "word": "Hard", "meaning": "A texture with high resistance to biting, requiring significant force.", "source": "pe", "peLabel": "Hard|texture" },
-            { "word": "Rigid", "meaning": "A stiff, inflexible texture that does not bend or deform.", "source": "pe" },
-            { "word": "Unyielding", "meaning": "A texture that does not give way or deform under pressure.", "source": "pe" }
+            { "word": "Mushy", "meaning": "An overly soft texture that has lost structural integrity.", "synonyms": ["squishy", "pulpy"], "source": "pe", "science": "Cell walls (pectin) break down with overcooking or overripening." },
+            { "word": "Delicate", "meaning": "An extremely soft, fragile texture that breaks easily.", "synonyms": ["fragile"], "source": "pe", "peLabel": "Delicate|softness" },
+            { "word": "Yielding", "meaning": "A texture that readily gives way to pressure without resistance.", "synonyms": ["giving"], "source": "pe" },
+            { "word": "Tender", "meaning": "A texture that is soft and easy to bite, yielding with little force.", "synonyms": ["soft"], "source": "pe", "science": "In meat, collagen converting to gelatin with slow cooking." },
+            { "word": "Firm", "meaning": "A texture that offers moderate resistance to biting, holding its shape well.", "synonyms": ["solid"], "source": "pe" },
+            { "word": "Dense", "meaning": "A tightly packed texture with little air or moisture, feeling heavy.", "synonyms": ["compact", "heavy"], "source": "pe", "peLabel": "Dense/Compact" },
+            { "word": "Hard", "meaning": "A texture with high resistance to biting, requiring significant force.", "synonyms": ["tough"], "source": "pe", "peLabel": "Hard|texture" },
+            { "word": "Rigid", "meaning": "A stiff, inflexible texture that does not bend or deform.", "synonyms": ["stiff"], "source": "pe" },
+            { "word": "Unyielding", "meaning": "A texture that does not give way or deform under pressure.", "synonyms": ["rock-hard"], "source": "pe" }
           ]
         },
         {
@@ -333,11 +333,11 @@
           "summary": "The degree to which food holds together and resists breaking apart.",
           "source": "pe",
           "scale": [
-            { "word": "Crumbly", "meaning": "A texture that breaks apart easily into small pieces.", "source": "pe" },
-            { "word": "Cohesive", "meaning": "A texture that holds together well without falling apart.", "source": "pe" },
-            { "word": "Sticky", "meaning": "A texture that adheres to surfaces and teeth.", "source": "pe" },
-            { "word": "Chewy", "meaning": "A texture requiring prolonged chewing, with good elasticity and cohesion.", "source": "pe", "science": "Gluten networks in bread; connective tissue in meat." },
-            { "word": "Gummy", "meaning": "A soft, elastic texture that sticks together and resists chewing.", "source": "pe" }
+            { "word": "Crumbly", "meaning": "A texture that breaks apart easily into small pieces.", "synonyms": ["friable"], "source": "pe" },
+            { "word": "Cohesive", "meaning": "A texture that holds together well without falling apart.", "synonyms": ["compact"], "source": "pe" },
+            { "word": "Sticky", "meaning": "A texture that adheres to surfaces and teeth.", "synonyms": ["tacky"], "source": "pe" },
+            { "word": "Chewy", "meaning": "A texture requiring prolonged chewing, with good elasticity and cohesion.", "synonyms": ["toothsome"], "source": "pe", "science": "Gluten networks in bread; connective tissue in meat." },
+            { "word": "Gummy", "meaning": "A soft, elastic texture that sticks together and resists chewing.", "synonyms": ["gluey"], "source": "pe" }
           ]
         },
         {
@@ -347,11 +347,11 @@
           "source": "sensory",
           "science": "Crisp and crunchy foods have low water activity; absorbed moisture plasticizes them and they go soft or stale.",
           "scale": [
-            { "word": "Tender-crisp", "meaning": "A gentle snap with give, like lightly cooked vegetables.", "source": "sensory" },
-            { "word": "Flaky", "meaning": "A texture that separates into thin, flat layers when bitten.", "source": "pe", "science": "Layers of fat between dough sheets turn to steam and separate the layers." },
-            { "word": "Crispy", "meaning": "A texture that shatters with a sharp sound and little resistance.", "source": "pe" },
-            { "word": "Crunchy", "meaning": "A texture that fractures with a loud sound and requires force to bite through.", "source": "pe" },
-            { "word": "Brittle", "meaning": "A hard, glassy texture that shatters into shards, like toffee or hard candy.", "source": "sensory", "science": "Sugar cooked to the hard-crack stage forms an amorphous glass." }
+            { "word": "Tender-crisp", "meaning": "A gentle snap with give, like lightly cooked vegetables.", "synonyms": ["crisp-tender"], "source": "sensory" },
+            { "word": "Flaky", "meaning": "A texture that separates into thin, flat layers when bitten.", "synonyms": ["layered"], "source": "pe", "science": "Layers of fat between dough sheets turn to steam and separate the layers." },
+            { "word": "Crispy", "meaning": "A texture that shatters with a sharp sound and little resistance.", "synonyms": ["crisp"], "source": "pe" },
+            { "word": "Crunchy", "meaning": "A texture that fractures with a loud sound and requires force to bite through.", "synonyms": ["crackly"], "source": "pe" },
+            { "word": "Brittle", "meaning": "A hard, glassy texture that shatters into shards, like toffee or hard candy.", "synonyms": ["snappy", "shattering"], "source": "sensory", "science": "Sugar cooked to the hard-crack stage forms an amorphous glass." }
           ]
         },
         {
@@ -360,10 +360,10 @@
           "summary": "How much air is built into the food, from lightly risen to almost weightless.",
           "source": "sensory",
           "scale": [
-            { "word": "Light", "meaning": "Noticeably less heavy than it looks.", "source": "sensory" },
-            { "word": "Airy", "meaning": "A light, porous texture with significant air incorporation.", "source": "pe", "science": "Gas bubbles trapped by protein (egg, gluten) or fat networks." },
-            { "word": "Pillowy", "meaning": "An exceptionally light, soft, cloud-like texture.", "source": "pe" },
-            { "word": "Foamy", "meaning": "Mostly air held in a thin film, collapsing on the tongue, like mousse or meringue.", "source": "sensory" }
+            { "word": "Light", "meaning": "Noticeably less heavy than it looks.", "synonyms": ["delicate"], "source": "sensory" },
+            { "word": "Airy", "meaning": "A light, porous texture with significant air incorporation.", "synonyms": ["aerated"], "source": "pe", "science": "Gas bubbles trapped by protein (egg, gluten) or fat networks." },
+            { "word": "Pillowy", "meaning": "An exceptionally light, soft, cloud-like texture.", "synonyms": ["fluffy", "cloud-like"], "source": "pe" },
+            { "word": "Foamy", "meaning": "Mostly air held in a thin film, collapsing on the tongue, like mousse or meringue.", "synonyms": ["frothy", "mousse-like"], "source": "sensory" }
           ]
         },
         {
@@ -372,10 +372,10 @@
           "summary": "How much the food springs back when you bite or press it.",
           "source": "sensory",
           "scale": [
-            { "word": "Gelatinous", "meaning": "A wobbly, gel-like texture from gelatin or similar hydrocolloids.", "source": "pe" },
-            { "word": "Springy", "meaning": "A texture that rebounds after compression, like a sponge.", "source": "pe" },
-            { "word": "Bouncy", "meaning": "A pleasantly resilient, elastic chew, like mochi or tapioca pearls (the 'QQ' texture).", "source": "sensory" },
-            { "word": "Rubbery", "meaning": "An overly elastic texture that resists being bitten through, like overcooked squid.", "source": "sensory" }
+            { "word": "Gelatinous", "meaning": "A wobbly, gel-like texture from gelatin or similar hydrocolloids.", "synonyms": ["jelly-like", "wobbly"], "source": "pe" },
+            { "word": "Springy", "meaning": "A texture that rebounds after compression, like a sponge.", "synonyms": ["elastic"], "source": "pe" },
+            { "word": "Bouncy", "meaning": "A pleasantly resilient, elastic chew, like mochi or tapioca pearls (the 'QQ' texture).", "synonyms": ["resilient"], "source": "sensory" },
+            { "word": "Rubbery", "meaning": "An overly elastic texture that resists being bitten through, like overcooked squid.", "synonyms": ["tough-chewy"], "source": "sensory" }
           ]
         },
         {
@@ -386,12 +386,12 @@
           "peLabel": "Particle Size",
           "science": "The tongue begins to detect particles around 20-30 micrometres; below that a food reads as smooth.",
           "scale": [
-            { "word": "Smooth", "meaning": "A texture with no detectable particles or roughness.", "source": "pe" },
-            { "word": "Fine", "meaning": "A texture with very small, evenly distributed particles.", "source": "pe", "peLabel": "Fine|texture" },
-            { "word": "Powdery", "meaning": "A dry texture of very fine particles that may feel chalky.", "source": "pe" },
-            { "word": "Sandy", "meaning": "A texture with fine, loose particles reminiscent of sand.", "source": "pe" },
-            { "word": "Gritty", "meaning": "A texture with small, rough particles that are distinctly perceptible.", "source": "pe" },
-            { "word": "Coarse", "meaning": "A texture with large, rough particles that are easily detected.", "source": "pe" }
+            { "word": "Smooth", "meaning": "A texture with no detectable particles or roughness.", "synonyms": [], "source": "pe" },
+            { "word": "Fine", "meaning": "A texture with very small, evenly distributed particles.", "synonyms": ["fine-grained"], "source": "pe", "peLabel": "Fine|texture" },
+            { "word": "Powdery", "meaning": "A dry texture of very fine particles that may feel chalky.", "synonyms": ["dusty", "floury"], "source": "pe" },
+            { "word": "Sandy", "meaning": "A texture with fine, loose particles reminiscent of sand.", "synonyms": ["grainy", "mealy"], "source": "pe" },
+            { "word": "Gritty", "meaning": "A texture with small, rough particles that are distinctly perceptible.", "synonyms": ["granular"], "source": "pe" },
+            { "word": "Coarse", "meaning": "A texture with large, rough particles that are easily detected.", "synonyms": ["rough"], "source": "pe" }
           ]
         },
         {
@@ -401,11 +401,11 @@
           "source": "pe",
           "peLabel": "Moisture Content",
           "scale": [
-            { "word": "Parched", "meaning": "An extremely dry texture that is unpleasant and difficult to swallow.", "source": "pe" },
-            { "word": "Dry", "meaning": "A texture with low moisture content that absorbs saliva.", "source": "pe", "peLabel": "Dry|texture" },
-            { "word": "Moist", "meaning": "A texture with adequate water content, neither dry nor wet.", "source": "pe" },
-            { "word": "Juicy", "meaning": "A texture that releases abundant moisture when bitten.", "source": "pe" },
-            { "word": "Succulent", "meaning": "A richly moist texture that releases flavorful juices generously.", "source": "pe", "science": "In meat, resting lets juices thicken and stay in the muscle fibres." }
+            { "word": "Parched", "meaning": "An extremely dry texture that is unpleasant and difficult to swallow.", "synonyms": ["desiccated", "bone-dry"], "source": "pe" },
+            { "word": "Dry", "meaning": "A texture with low moisture content that absorbs saliva.", "synonyms": [], "source": "pe", "peLabel": "Dry|texture" },
+            { "word": "Moist", "meaning": "A texture with adequate water content, neither dry nor wet.", "synonyms": ["damp"], "source": "pe" },
+            { "word": "Juicy", "meaning": "A texture that releases abundant moisture when bitten.", "synonyms": ["watery-fresh"], "source": "pe" },
+            { "word": "Succulent", "meaning": "A richly moist texture that releases flavorful juices generously.", "synonyms": ["luscious"], "source": "pe", "science": "In meat, resting lets juices thicken and stay in the muscle fibres." }
           ]
         }
       ]
@@ -424,12 +424,12 @@
           "source": "pe",
           "peLabel": "Viscosity",
           "scale": [
-            { "word": "Watery", "meaning": "A very thin, low-viscosity texture like water.", "source": "pe" },
-            { "word": "Thin", "meaning": "A low-viscosity texture that pours easily with little resistance.", "source": "pe" },
-            { "word": "Runny", "meaning": "A low-viscosity texture that flows freely and quickly.", "source": "pe" },
-            { "word": "Thick", "meaning": "A high-viscosity texture that resists flow and pours slowly.", "source": "pe", "science": "Starches, gums and reduced proteins thicken by tangling water in long molecules." },
-            { "word": "Syrupy", "meaning": "A thick, slow-flowing texture like syrup, with high sugar content.", "source": "pe" },
-            { "word": "Viscous", "meaning": "A dense, slow-flowing texture from high molecular weight compounds.", "source": "pe" }
+            { "word": "Watery", "meaning": "A very thin, low-viscosity texture like water.", "synonyms": ["dilute"], "source": "pe" },
+            { "word": "Thin", "meaning": "A low-viscosity texture that pours easily with little resistance.", "synonyms": ["light-bodied"], "source": "pe" },
+            { "word": "Runny", "meaning": "A low-viscosity texture that flows freely and quickly.", "synonyms": ["pourable"], "source": "pe" },
+            { "word": "Thick", "meaning": "A high-viscosity texture that resists flow and pours slowly.", "synonyms": ["full-bodied"], "source": "pe", "science": "Starches, gums and reduced proteins thicken by tangling water in long molecules." },
+            { "word": "Syrupy", "meaning": "A thick, slow-flowing texture like syrup, with high sugar content.", "synonyms": ["treacly"], "source": "pe" },
+            { "word": "Viscous", "meaning": "A dense, slow-flowing texture from high molecular weight compounds.", "synonyms": ["gloopy"], "source": "pe" }
           ]
         },
         {
@@ -439,10 +439,10 @@
           "source": "sensory",
           "science": "Fat droplets in an emulsion lubricate the tongue and palate, lowering friction.",
           "scale": [
-            { "word": "Smooth", "meaning": "A texture with no detectable particles or roughness.", "source": "pe" },
-            { "word": "Silky", "meaning": "Slippery-smooth and light, gliding across the tongue.", "source": "sensory" },
-            { "word": "Creamy", "meaning": "A smooth, rich texture from fat emulsions that coats the mouth.", "source": "pe" },
-            { "word": "Velvety", "meaning": "An exceptionally smooth, soft texture that feels luxurious in the mouth.", "source": "pe" }
+            { "word": "Smooth", "meaning": "A texture with no detectable particles or roughness.", "synonyms": [], "source": "pe" },
+            { "word": "Silky", "meaning": "Slippery-smooth and light, gliding across the tongue.", "synonyms": ["satiny"], "source": "sensory" },
+            { "word": "Creamy", "meaning": "A smooth, rich texture from fat emulsions that coats the mouth.", "synonyms": ["lush"], "source": "pe" },
+            { "word": "Velvety", "meaning": "An exceptionally smooth, soft texture that feels luxurious in the mouth.", "synonyms": ["plush"], "source": "pe" }
           ]
         },
         {
@@ -453,11 +453,11 @@
           "peLabel": "Fat Content",
           "science": "Fat coats the mouth and carries fat-soluble aromas; free fatty acids may also be tasted directly (via CD36/GPR120), sometimes called 'oleogustus'.",
           "scale": [
-            { "word": "Lean", "meaning": "Little perceptible fat; clean and light.", "source": "sensory" },
-            { "word": "Buttery", "meaning": "A smooth, rich fat texture characteristic of butter.", "source": "pe", "peLabel": "Buttery|texture" },
-            { "word": "Rich", "meaning": "A full-bodied, satisfying fat texture that coats the mouth generously.", "source": "pe", "peLabel": "Rich|fat" },
-            { "word": "Oily", "meaning": "A texture with perceptible free oil that coats the mouth.", "source": "pe" },
-            { "word": "Greasy", "meaning": "A texture with excess oil that feels heavy and leaves residue.", "source": "pe" }
+            { "word": "Lean", "meaning": "Little perceptible fat; clean and light.", "synonyms": ["light"], "source": "sensory" },
+            { "word": "Buttery", "meaning": "A smooth, rich fat texture characteristic of butter.", "synonyms": ["butter-rich"], "source": "pe", "peLabel": "Buttery|texture" },
+            { "word": "Rich", "meaning": "A full-bodied, satisfying fat texture that coats the mouth generously.", "synonyms": ["indulgent"], "source": "pe", "peLabel": "Rich|fat" },
+            { "word": "Oily", "meaning": "A texture with perceptible free oil that coats the mouth.", "synonyms": ["slick"], "source": "pe" },
+            { "word": "Greasy", "meaning": "A texture with excess oil that feels heavy and leaves residue.", "synonyms": ["fatty"], "source": "pe" }
           ]
         },
         {
@@ -468,12 +468,12 @@
           "peLabel": "Astringent|texture",
           "science": "Tannins bind and precipitate the lubricating proteins in saliva, so the mouth feels rough and dry. It is a touch sensation, not a taste.",
           "scale": [
-            { "word": "Drying", "meaning": "A sensation where moisture is pulled from the mouth tissues.", "source": "pe", "peLabel": "Drying/Mouth-Drying" },
-            { "word": "Tightening", "meaning": "An astringent sensation that causes mouth tissues to feel contracted.", "source": "pe" },
-            { "word": "Tannic", "meaning": "An astringency from tannin compounds, characteristic of red wine and tea.", "source": "pe" },
-            { "word": "Unripe", "meaning": "An astringency from tannins in immature fruit before full ripening.", "source": "pe" },
-            { "word": "Rough", "meaning": "A texture with an uneven, abrasive quality on the palate.", "source": "pe" },
-            { "word": "Puckering", "meaning": "A strong astringency that causes the lips and cheeks to draw in.", "source": "pe", "peLabel": "Puckering|astringent" }
+            { "word": "Drying", "meaning": "A sensation where moisture is pulled from the mouth tissues.", "synonyms": [], "source": "pe", "peLabel": "Drying/Mouth-Drying" },
+            { "word": "Tightening", "meaning": "An astringent sensation that causes mouth tissues to feel contracted.", "synonyms": ["gripping"], "source": "pe" },
+            { "word": "Tannic", "meaning": "An astringency from tannin compounds, characteristic of red wine and tea.", "synonyms": ["grippy"], "source": "pe" },
+            { "word": "Unripe", "meaning": "An astringency from tannins in immature fruit before full ripening.", "synonyms": ["green"], "source": "pe" },
+            { "word": "Rough", "meaning": "A texture with an uneven, abrasive quality on the palate.", "synonyms": ["coarse"], "source": "pe" },
+            { "word": "Puckering", "meaning": "A strong astringency that causes the lips and cheeks to draw in.", "synonyms": ["mouth-puckering"], "source": "pe", "peLabel": "Puckering|astringent" }
           ]
         },
         {
@@ -483,11 +483,11 @@
           "source": "sensory",
           "science": "CO2 is turned into carbonic acid by carbonic anhydrase on sour-sensing cells, so fizz is partly a sour signal as well as the physical pop of bubbles.",
           "scale": [
-            { "word": "Spritzy", "meaning": "A faint prickle of tiny bubbles, just enough to lift the drink.", "source": "sensory" },
-            { "word": "Effervescent", "meaning": "Lively, steady streams of fine bubbles.", "source": "sensory" },
-            { "word": "Fizzy", "meaning": "Plenty of bubbles that pop noticeably on the tongue.", "source": "sensory" },
-            { "word": "Prickly", "meaning": "A sharp, needle-like sensation on the tongue or cheeks.", "source": "pe" },
-            { "word": "Aggressive", "meaning": "Coarse, stinging carbonation that bites the throat.", "source": "sensory" }
+            { "word": "Spritzy", "meaning": "A faint prickle of tiny bubbles, just enough to lift the drink.", "synonyms": ["lightly sparkling", "pétillant"], "source": "sensory" },
+            { "word": "Effervescent", "meaning": "Lively, steady streams of fine bubbles.", "synonyms": ["sparkling", "bubbly"], "source": "sensory" },
+            { "word": "Fizzy", "meaning": "Plenty of bubbles that pop noticeably on the tongue.", "synonyms": ["carbonated"], "source": "sensory" },
+            { "word": "Prickly", "meaning": "A sharp, needle-like sensation on the tongue or cheeks.", "synonyms": ["prickling"], "source": "pe" },
+            { "word": "Aggressive", "meaning": "Coarse, stinging carbonation that bites the throat.", "synonyms": ["harsh-bubbled"], "source": "sensory" }
           ]
         }
       ]
@@ -507,13 +507,13 @@
           "peLabel": "Spicy/Pungent|taste",
           "science": "Capsaicin (chili) and piperine (black pepper) trigger the TRPV1 heat-pain receptor; wasabi and mustard work via TRPA1.",
           "scale": [
-            { "word": "Tingling", "meaning": "A light, effervescent spicy sensation, as from Sichuan peppercorns.", "source": "pe" },
-            { "word": "Prickling", "meaning": "A mild, tingling spicy sensation on the tongue or lips.", "source": "pe" },
-            { "word": "Warming", "meaning": "A gentle, spreading glow of heat, like ginger or cinnamon.", "source": "sensory", "science": "Gingerols and shogaols in ginger." },
-            { "word": "Biting", "meaning": "A spiciness with a sharp, stinging edge.", "source": "pe", "peLabel": "Biting|spicy" },
-            { "word": "Sharp", "meaning": "A sudden, intense spiciness with an immediate bite.", "source": "pe", "peLabel": "Sharp|spicy" },
-            { "word": "Burning", "meaning": "An intense heat sensation from spicy compounds affecting mucous membranes.", "source": "pe", "science": "Capsaicin is fat-soluble: dairy and oil relieve the burn better than water." },
-            { "word": "Irritating", "meaning": "A sharp, unpleasant spiciness that causes discomfort.", "source": "pe" }
+            { "word": "Tingling", "meaning": "A light, effervescent spicy sensation, as from Sichuan peppercorns.", "synonyms": ["tingly"], "source": "pe" },
+            { "word": "Prickling", "meaning": "A mild, tingling spicy sensation on the tongue or lips.", "synonyms": ["prickly"], "source": "pe" },
+            { "word": "Warming", "meaning": "A gentle, spreading glow of heat, like ginger or cinnamon.", "synonyms": ["gently hot"], "source": "sensory", "science": "Gingerols and shogaols in ginger." },
+            { "word": "Biting", "meaning": "A spiciness with a sharp, stinging edge.", "synonyms": ["nippy"], "source": "pe", "peLabel": "Biting|spicy" },
+            { "word": "Sharp", "meaning": "A sudden, intense spiciness with an immediate bite.", "synonyms": ["stinging"], "source": "pe", "peLabel": "Sharp|spicy" },
+            { "word": "Burning", "meaning": "An intense heat sensation from spicy compounds affecting mucous membranes.", "synonyms": ["fiery", "blazing"], "source": "pe", "science": "Capsaicin is fat-soluble: dairy and oil relieve the burn better than water." },
+            { "word": "Irritating", "meaning": "A sharp, unpleasant spiciness that causes discomfort.", "synonyms": ["painful"], "source": "pe" }
           ]
         },
         {
@@ -524,10 +524,10 @@
           "peLabel": "Cooling|taste",
           "science": "Menthol and similar compounds activate TRPM8, the same receptor that senses cold temperatures.",
           "scale": [
-            { "word": "Refreshing", "meaning": "A clean, lively flavor that invigorates and revitalizes the palate.", "source": "pe" },
-            { "word": "Cool", "meaning": "A gentle cooling that freshens the breath, like cucumber or spearmint.", "source": "sensory" },
-            { "word": "Minty", "meaning": "A clear menthol chill across the tongue and nose.", "source": "sensory" },
-            { "word": "Icy", "meaning": "A strong, almost cold-burn chill, like strong peppermint or eucalyptus.", "source": "sensory" }
+            { "word": "Refreshing", "meaning": "A clean, lively flavor that invigorates and revitalizes the palate.", "synonyms": ["cooling"], "source": "pe" },
+            { "word": "Cool", "meaning": "A gentle cooling that freshens the breath, like cucumber or spearmint.", "synonyms": [], "source": "sensory" },
+            { "word": "Minty", "meaning": "A clear menthol chill across the tongue and nose.", "synonyms": ["mentholated"], "source": "sensory" },
+            { "word": "Icy", "meaning": "A strong, almost cold-burn chill, like strong peppermint or eucalyptus.", "synonyms": ["frosty"], "source": "sensory" }
           ]
         },
         {
@@ -537,10 +537,10 @@
           "source": "sensory",
           "science": "Hydroxy-alpha-sanshool excites touch-sensing nerves so lips feel a buzz around 50 Hz; Chinese cuisine calls the effect 'ma'.",
           "scale": [
-            { "word": "Tingly", "meaning": "A light fizz on the lips and tongue.", "source": "sensory" },
-            { "word": "Buzzing", "meaning": "A steady vibrating sensation, as if the lips are humming.", "source": "sensory" },
-            { "word": "Electric", "meaning": "A sharp, battery-like zing.", "source": "sensory" },
-            { "word": "Numbing", "meaning": "The lips and tongue go partly numb for a while.", "source": "sensory" }
+            { "word": "Tingly", "meaning": "A light fizz on the lips and tongue.", "synonyms": ["fizzing"], "source": "sensory" },
+            { "word": "Buzzing", "meaning": "A steady vibrating sensation, as if the lips are humming.", "synonyms": ["vibrating"], "source": "sensory" },
+            { "word": "Electric", "meaning": "A sharp, battery-like zing.", "synonyms": ["zappy"], "source": "sensory" },
+            { "word": "Numbing", "meaning": "The lips and tongue go partly numb for a while.", "synonyms": ["anesthetic"], "source": "sensory" }
           ]
         },
         {
@@ -557,11 +557,11 @@
               "source": "pe",
               "science": "Warmth increases perceived sweetness and aroma release; cold suppresses both.",
               "scale": [
-                { "word": "Lukewarm", "meaning": "A food at a tepid temperature, neither warm nor cold.", "source": "pe" },
-                { "word": "Warm", "meaning": "A food served at comfortably warm temperatures.", "source": "pe", "peLabel": "Warm|food" },
-                { "word": "Hot", "meaning": "A food served at temperatures that feel very warm to hot in the mouth.", "source": "pe", "peLabel": "Hot|food" },
-                { "word": "Piping hot", "meaning": "Steaming; you need to blow on it before eating.", "source": "sensory" },
-                { "word": "Scalding", "meaning": "Hot enough to burn the mouth.", "source": "sensory" }
+                { "word": "Lukewarm", "meaning": "A food at a tepid temperature, neither warm nor cold.", "synonyms": ["tepid"], "source": "pe" },
+                { "word": "Warm", "meaning": "A food served at comfortably warm temperatures.", "synonyms": [], "source": "pe", "peLabel": "Warm|food" },
+                { "word": "Hot", "meaning": "A food served at temperatures that feel very warm to hot in the mouth.", "synonyms": [], "source": "pe", "peLabel": "Hot|food" },
+                { "word": "Piping hot", "meaning": "Steaming; you need to blow on it before eating.", "synonyms": ["steaming"], "source": "sensory" },
+                { "word": "Scalding", "meaning": "Hot enough to burn the mouth.", "synonyms": ["searing", "blistering"], "source": "sensory" }
               ]
             },
             {
@@ -571,10 +571,10 @@
               "source": "pe",
               "science": "Cold dulls sweetness, which is why melted ice cream tastes far sweeter.",
               "scale": [
-                { "word": "Cool", "meaning": "A food served at a slightly chilled, refreshing temperature.", "source": "pe", "peLabel": "Cool|food" },
-                { "word": "Chilled", "meaning": "Properly cold from the fridge.", "source": "sensory" },
-                { "word": "Cold", "meaning": "A food served at a noticeably chilled temperature.", "source": "pe", "peLabel": "Cold|food" },
-                { "word": "Icy", "meaning": "A food served at or near freezing temperature with a numbing effect.", "source": "pe" }
+                { "word": "Cool", "meaning": "A food served at a slightly chilled, refreshing temperature.", "synonyms": [], "source": "pe", "peLabel": "Cool|food" },
+                { "word": "Chilled", "meaning": "Properly cold from the fridge.", "synonyms": ["fridge-cold"], "source": "sensory" },
+                { "word": "Cold", "meaning": "A food served at a noticeably chilled temperature.", "synonyms": [], "source": "pe", "peLabel": "Cold|food" },
+                { "word": "Icy", "meaning": "A food served at or near freezing temperature with a numbing effect.", "synonyms": ["ice-cold", "frosty"], "source": "pe" }
               ]
             }
           ]
@@ -594,12 +594,12 @@
           "summary": "How loud the flavor is overall.",
           "source": "pe",
           "scale": [
-            { "word": "Delicate", "meaning": "A gentle, subtle overall flavor that is refined and not overpowering.", "source": "pe", "peLabel": "Delicate|impression" },
-            { "word": "Mild", "meaning": "A moderate, understated flavor that is pleasant and unintimidating.", "source": "pe", "peLabel": "Mild|impression" },
-            { "word": "Mellow", "meaning": "A soft, rounded overall flavor that is smooth and well-integrated.", "source": "pe", "peLabel": "Mellow|impression" },
-            { "word": "Rich", "meaning": "A deep, full-bodied flavor that is satisfying and complex.", "source": "pe", "peLabel": "Rich|impression" },
-            { "word": "Robust", "meaning": "A full-bodied, assertive flavor profile with strength and presence.", "source": "pe", "peLabel": "Robust|flavor" },
-            { "word": "Intense", "meaning": "A powerful, concentrated flavor with strong impact on the palate.", "source": "pe" }
+            { "word": "Delicate", "meaning": "A gentle, subtle overall flavor that is refined and not overpowering.", "synonyms": ["subtle"], "source": "pe", "peLabel": "Delicate|impression" },
+            { "word": "Mild", "meaning": "A moderate, understated flavor that is pleasant and unintimidating.", "synonyms": ["gentle"], "source": "pe", "peLabel": "Mild|impression" },
+            { "word": "Mellow", "meaning": "A soft, rounded overall flavor that is smooth and well-integrated.", "synonyms": ["soft", "rounded"], "source": "pe", "peLabel": "Mellow|impression" },
+            { "word": "Rich", "meaning": "A deep, full-bodied flavor that is satisfying and complex.", "synonyms": ["full"], "source": "pe", "peLabel": "Rich|impression" },
+            { "word": "Robust", "meaning": "A full-bodied, assertive flavor profile with strength and presence.", "synonyms": ["hearty", "bold"], "source": "pe", "peLabel": "Robust|flavor" },
+            { "word": "Intense", "meaning": "A powerful, concentrated flavor with strong impact on the palate.", "synonyms": ["powerful"], "source": "pe" }
           ]
         },
         {
@@ -609,11 +609,11 @@
           "source": "sensory",
           "science": "Acidity and fresh volatile aromas drive perceived brightness; a squeeze of acid can 'wake up' a flat dish.",
           "scale": [
-            { "word": "Muted", "meaning": "Flavors are there but feel dull or flat.", "source": "sensory" },
-            { "word": "Fresh", "meaning": "Clean and recently made, nothing tired about it.", "source": "sensory" },
-            { "word": "Refreshing", "meaning": "A clean, lively flavor that invigorates and revitalizes the palate.", "source": "pe" },
-            { "word": "Bright", "meaning": "A vivid, lively flavor that stands out with clarity and freshness.", "source": "pe", "peLabel": "Bright|flavor" },
-            { "word": "Vibrant", "meaning": "Bursting with vivid, high-contrast flavor.", "source": "sensory" }
+            { "word": "Muted", "meaning": "Flavors are there but feel dull or flat.", "synonyms": ["dull", "flat"], "source": "sensory" },
+            { "word": "Fresh", "meaning": "Clean and recently made, nothing tired about it.", "synonyms": ["clean"], "source": "sensory" },
+            { "word": "Refreshing", "meaning": "A clean, lively flavor that invigorates and revitalizes the palate.", "synonyms": ["invigorating"], "source": "pe" },
+            { "word": "Bright", "meaning": "A vivid, lively flavor that stands out with clarity and freshness.", "synonyms": ["lively"], "source": "pe", "peLabel": "Bright|flavor" },
+            { "word": "Vibrant", "meaning": "Bursting with vivid, high-contrast flavor.", "synonyms": ["zippy", "electric"], "source": "sensory" }
           ]
         },
         {
@@ -623,11 +623,11 @@
           "source": "pe",
           "peLabel": "Flavor Combinations",
           "scale": [
-            { "word": "Simple", "meaning": "One clear flavor, straightforward and easy to name.", "source": "sensory" },
-            { "word": "Balanced", "meaning": "A flavor combination where no single element dominates and all components are in proportion.", "source": "pe", "peLabel": "Balanced|flavor" },
-            { "word": "Harmonious", "meaning": "A combination of flavors where all elements work together pleasantly without conflict.", "source": "pe", "peLabel": "Harmonious|flavor-combo" },
-            { "word": "Layered", "meaning": "A flavor that reveals different notes in sequence on the palate, mid-palate, and finish.", "source": "pe" },
-            { "word": "Complex", "meaning": "A flavor profile with multiple distinct layers and dimensions that evolve on the palate.", "source": "pe", "peLabel": "Complex|flavor" }
+            { "word": "Simple", "meaning": "One clear flavor, straightforward and easy to name.", "synonyms": ["straightforward"], "source": "sensory" },
+            { "word": "Balanced", "meaning": "A flavor combination where no single element dominates and all components are in proportion.", "synonyms": ["even"], "source": "pe", "peLabel": "Balanced|flavor" },
+            { "word": "Harmonious", "meaning": "A combination of flavors where all elements work together pleasantly without conflict.", "synonyms": ["integrated", "seamless"], "source": "pe", "peLabel": "Harmonious|flavor-combo" },
+            { "word": "Layered", "meaning": "A flavor that reveals different notes in sequence on the palate, mid-palate, and finish.", "synonyms": ["multi-dimensional"], "source": "pe" },
+            { "word": "Complex", "meaning": "A flavor profile with multiple distinct layers and dimensions that evolve on the palate.", "synonyms": ["intricate"], "source": "pe", "peLabel": "Complex|flavor" }
           ]
         }
       ]
@@ -645,12 +645,12 @@
           "source": "sensory",
           "science": "Aromas rising from the throat after swallowing (retronasal smell) carry most of the finish.",
           "scale": [
-            { "word": "Fleeting", "meaning": "Gone almost as soon as you swallow.", "source": "sensory" },
-            { "word": "Short", "meaning": "A brief echo of the flavor, then nothing.", "source": "sensory" },
-            { "word": "Medium", "meaning": "Lingers a few seconds before fading.", "source": "sensory" },
-            { "word": "Lingering", "meaning": "Stays noticeably for a while after each bite or sip.", "source": "sensory" },
-            { "word": "Long", "meaning": "Keeps developing well after swallowing.", "source": "sensory" },
-            { "word": "Persistent", "meaning": "Still there long after; it may color the next bite.", "source": "sensory" }
+            { "word": "Fleeting", "meaning": "Gone almost as soon as you swallow.", "synonyms": ["brief"], "source": "sensory" },
+            { "word": "Short", "meaning": "A brief echo of the flavor, then nothing.", "synonyms": ["abrupt"], "source": "sensory" },
+            { "word": "Medium", "meaning": "Lingers a few seconds before fading.", "synonyms": ["moderate"], "source": "sensory" },
+            { "word": "Lingering", "meaning": "Stays noticeably for a while after each bite or sip.", "synonyms": ["enduring"], "source": "sensory" },
+            { "word": "Long", "meaning": "Keeps developing well after swallowing.", "synonyms": ["extended"], "source": "sensory" },
+            { "word": "Persistent", "meaning": "Still there long after; it may color the next bite.", "synonyms": ["unending"], "source": "sensory" }
           ]
         },
         {
@@ -659,11 +659,11 @@
           "summary": "What the finish leaves in the mouth, from clean to heavy.",
           "source": "sensory",
           "scale": [
-            { "word": "Clean", "meaning": "Leaves the palate fresh, with nothing behind.", "source": "sensory" },
-            { "word": "Crisp", "meaning": "A neat, sharp end that resets the palate, often from acidity or bubbles.", "source": "sensory" },
-            { "word": "Dry", "meaning": "Leaves the mouth slightly dry, often from tannins or alcohol.", "source": "sensory" },
-            { "word": "Coating", "meaning": "A film of fat or sugar stays on the tongue.", "source": "sensory" },
-            { "word": "Cloying", "meaning": "An excessively sweet quality that becomes unpleasant or overwhelming.", "source": "pe", "peLabel": "Cloying (negatively sweet)" }
+            { "word": "Clean", "meaning": "Leaves the palate fresh, with nothing behind.", "synonyms": ["neat"], "source": "sensory" },
+            { "word": "Crisp", "meaning": "A neat, sharp end that resets the palate, often from acidity or bubbles.", "synonyms": ["snappy"], "source": "sensory" },
+            { "word": "Dry", "meaning": "Leaves the mouth slightly dry, often from tannins or alcohol.", "synonyms": [], "source": "sensory" },
+            { "word": "Coating", "meaning": "A film of fat or sugar stays on the tongue.", "synonyms": ["filmy"], "source": "sensory" },
+            { "word": "Cloying", "meaning": "An excessively sweet quality that becomes unpleasant or overwhelming.", "synonyms": ["sickly"], "source": "pe", "peLabel": "Cloying (negatively sweet)" }
           ]
         }
       ]
