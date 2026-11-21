@@ -47,13 +47,6 @@ function el(tag, attrs = {}, ...children) {
   return node
 }
 
-function badge(source) {
-  return source === 'pe'
-    ? null
-    : el('span', { class: 'badge badge-sensory', title: 'Standard sensory-science vocabulary' }, 'std')
-}
-
-
 function breadcrumb(chain) {
   return el(
     'nav',
@@ -151,7 +144,7 @@ function renderScale(chain, selected) {
       ? el(
           'section',
           { class: 'detail' },
-          el('h2', {}, current.word, badge(current.source)),
+          el('h2', {}, current.word),
           el('p', {}, current.meaning),
           current.science ? el('p', { class: 'science' }, el('strong', {}, 'Food science: '), current.science) : null,
         )
@@ -168,7 +161,6 @@ function renderScale(chain, selected) {
             'div',
             {},
             el('strong', {}, w.word),
-            badge(w.source),
             el('span', { class: 'glossary-meaning' }, ` ${w.meaning}`),
             w.science ? el('span', { class: 'glossary-science' }, w.science) : null,
           ),
